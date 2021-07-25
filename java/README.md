@@ -1,3 +1,3 @@
 | code challenge | Links                            |
 | -----------    | -------------------------        |
-| array-reversed | [link](array-reverse/README.md)  |
+| array-reversed | [code challenge](array-reverse/README.md)  |
