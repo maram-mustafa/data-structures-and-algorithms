@@ -1,4 +1,3 @@
-# Data Structures and Algorithms
-
-## Language: `Java`
-
+| code challenge | Links                            |
+| -----------    | -------------------------        |
+| array-reversed | [link](array-reverse/README.md)  |
