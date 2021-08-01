@@ -2,25 +2,25 @@ package array.linked.list;
 
 public class LinkedList {
 
-  public Node head=null;
-  public Node tail=null;
+  public Node head = null;
+  public Node tail = null;
 
-  public void insert(int data){
+  public void insert(int data) {
     Node insertNode = new Node(data);
-    if(head == null){
+    if (head == null) {
       head = insertNode;
-      tail=head;
-    }else{
-      tail.next=insertNode;
-      tail=insertNode;
+      tail = head;
+    } else {
+      tail.next = insertNode;
+      tail = insertNode;
     }
   }
 
-  public boolean include(int data){
-    Node current =head;
+  public boolean include(int data) {
+    Node current = head;
 
-    while(current != null){
-      if(data == current.data){
+    while (current != null) {
+      if (data == current.data) {
         System.out.println("include!!!");
         return true;
       }
@@ -31,7 +31,7 @@ public class LinkedList {
   }
 
   //to string
-  String toStr() {
+  public String toString() {
     String stringList = "";
     Node current = head;
 

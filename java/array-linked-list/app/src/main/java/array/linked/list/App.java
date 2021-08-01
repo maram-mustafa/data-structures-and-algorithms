@@ -9,21 +9,21 @@ public class App {
     }
 
     public static void main(String[] args) {
-      LinkedList List = new LinkedList();
-      // insert method
-      List.insert(10);
-      List.insert(20);
-      List.insert(30);
+          LinkedList list1 = new LinkedList();
+    // insert
+    list1.insert(1);
+    list1.insert(2);
+    list1.insert(3);
+    list1.insert(50);
+    list1.insert(4);
+    list1.insert(100);
+    list1.insert(300);
 
-      //include method
-      List.include(2);
-      List.include(4);
-      List.include(6);
+    //includes
+    System.out.println(list1.include(300));
 
-      //toSrting method
-
-      List.toString();
-
+    // to string
+    System.out.println(list1.toString());
 
 
     }
