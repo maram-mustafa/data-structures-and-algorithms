@@ -9,6 +9,22 @@ public class App {
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+      LinkedList List = new LinkedList();
+      // insert method
+      List.insert(10);
+      List.insert(20);
+      List.insert(30);
+
+      //include method
+      List.include(2);
+      List.include(4);
+      List.include(6);
+
+      //toSrting method
+
+      List.toString();
+
+
+
     }
 }
