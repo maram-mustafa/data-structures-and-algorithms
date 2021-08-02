@@ -9,21 +9,47 @@ public class App {
     }
 
     public static void main(String[] args) {
-          LinkedList list1 = new LinkedList();
-    // insert
-    list1.insert(1);
-    list1.insert(2);
-    list1.insert(3);
-    list1.insert(50);
-    list1.insert(4);
-    list1.insert(100);
-    list1.insert(300);
+//          LinkedList list1 = new LinkedList();
+//    // insert
+//    list1.insert(1);
+//    list1.insert(2);
+//    list1.insert(3);
+//    list1.insert(50);
+//    list1.insert(4);
+//    list1.insert(100);
+//    list1.insert(300);
+//
+//    //includes
+//    System.out.println(list1.include(300));
+//
+//    // to string
+//    System.out.println(list1.toString());
 
-    //includes
-    System.out.println(list1.include(300));
+      //////////////////////////////////////// code challenge 6
 
-    // to string
-    System.out.println(list1.toString());
+    //append method
+      LinkedList list2 = new LinkedList();
+
+      list2.append(1);
+      list2.append(3);
+      list2.append(5);
+
+//      System.out.println(list2.toString());
+
+
+      list2.insertBefore(5,2);
+      System.out.println(list2.toString());
+
+
+      list2.insertAfter(2,100);
+      System.out.println(list2.toString());
+
+
+
+
+
+
+
 
 
     }
