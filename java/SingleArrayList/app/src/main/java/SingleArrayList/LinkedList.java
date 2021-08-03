@@ -61,56 +61,56 @@ public class LinkedList {
     }
   }
 
-  public void insertBefore(int value, int newValue) {
-    if (head != null) {
-      if (value == head.data) {
-        Node newNode = new Node(newValue);
-        newNode.next = head;
-        head = newNode;
-
-      } else {
-        Node current = head;
-        Node previous = current;
-        while (current != null) {
-          if (value == current.data) {
-            Node newNode = new Node(newValue);
-            newNode.next = current;
-            previous.next = newNode;
-          }
-          previous = current;
-          current = current.next;
-        }
-      }
-    }
-  }
-
-
-public  void insertAfter(int value, int newValue) {
-    if (head != null) {
-      if (value == tail.data) {
-        Node newNode = new Node(newValue);
-        tail.next = newNode;
-        tail = newNode;
-      } else {
-        Node current = head;
-        Node next = current.next;
-        while (current != null) {
-          if (value == current.data) {
-            Node newNode = new Node(newValue);
-            newNode.next = next;
-            current.next = newNode;
-            break;
-          }
-          if (current.next != null) {
-            current = current.next;
-            next = current.next;
-          } else {
-            current = current.next;
-          }
-        }
-      }
-    }
-  }
+//  public void insertBefore(int value, int newValue) {
+//    if (head != null) {
+//      if (value == head.data) {
+//        Node newNode = new Node(newValue);
+//        newNode.next = head;
+//        head = newNode;
+//
+//      } else {
+//        Node current = head;
+//        Node previous = current;
+//        while (current != null) {
+//          if (value == current.data) {
+//            Node newNode = new Node(newValue);
+//            newNode.next = current;
+//            previous.next = newNode;
+//          }
+//          previous = current;
+//          current = current.next;
+//        }
+//      }
+//    }
+//  }
+//
+//
+//public  void insertAfter(int value, int newValue) {
+//    if (head != null) {
+//      if (value == tail.data) {
+//        Node newNode = new Node(newValue);
+//        tail.next = newNode;
+//        tail = newNode;
+//      } else {
+//        Node current = head;
+//        Node next = current.next;
+//        while (current != null) {
+//          if (value == current.data) {
+//            Node newNode = new Node(newValue);
+//            newNode.next = next;
+//            current.next = newNode;
+//            break;
+//          }
+//          if (current.next != null) {
+//            current = current.next;
+//            next = current.next;
+//          } else {
+//            current = current.next;
+//          }
+//        }
+//      }
+//    }
+//  }
 
 /////// code challenge 7
 

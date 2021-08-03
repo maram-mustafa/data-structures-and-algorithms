@@ -4,34 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58cbf6e9-1445-4679-9f8d-c2197802d0d2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../array-binary-search/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/array/linked/list/LinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/array/linked/list/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../images/array-binary-search.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/array/linked/list/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/array/linked/list/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/array/linked/list/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/array/linked/list/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../arrayList/.gradle/7.0.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../arrayList/.gradle/7.0.1/dependencies-accessors/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../arrayList/.gradle/7.0.1/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../arrayList/.gradle/7.0.1/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../arrayList/.gradle/7.0.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../arrayList/.gradle/7.0.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../arrayList/.gradle/7.0.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../arrayList/.gradle/7.0.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../arrayList/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../arrayList/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../arrayList/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../arrayList/.gradle/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../arrayList/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../arrayList/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../arrayList/.idea/workspace.xml" beforeDir="false" />
-    </list>
+    <list default="true" id="58cbf6e9-1445-4679-9f8d-c2197802d0d2" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -217,6 +190,7 @@
       <workItem from="1627949985599" duration="52000" />
       <workItem from="1627950490317" duration="280000" />
       <workItem from="1627950967475" duration="31000" />
+      <workItem from="1628030009455" duration="20000" />
     </task>
     <servers />
   </component>
