@@ -10,30 +10,27 @@
       <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/java/array/linked/list/LinkedList.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/java/array/linked/list/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../arrayList/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../arrayList/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../arrayList/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../arrayList/.idea/arrayList.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../arrayList/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../arrayList/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../arrayList/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../arrayList/app/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../arrayList/app/src/main/java/arrayList/App.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../arrayList/app/src/main/java/arrayList/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../arrayList/app/src/main/java/arrayList/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../arrayList/app/src/main/java/arrayList/linkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../arrayList/app/src/test/java/arrayList/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../arrayList/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../arrayList/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../arrayList/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../arrayList/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../arrayList/settings.gradle" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../images/array-binary-search.PNG" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/array/linked/list/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/array/linked/list/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/test/java/array/linked/list/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/array/linked/list/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../arrayList/.gradle/7.0.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../arrayList/.gradle/7.0.1/dependencies-accessors/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../arrayList/.gradle/7.0.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../arrayList/.gradle/7.0.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../arrayList/.gradle/7.0.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../arrayList/.gradle/7.0.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../arrayList/.gradle/7.0.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../arrayList/.gradle/7.0.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../arrayList/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../arrayList/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../arrayList/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../arrayList/.gradle/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../arrayList/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../arrayList/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../arrayList/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +88,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SingleArrayList" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -218,6 +215,8 @@
       <workItem from="1627949252506" duration="436000" />
       <workItem from="1627949750530" duration="190000" />
       <workItem from="1627949985599" duration="52000" />
+      <workItem from="1627950490317" duration="280000" />
+      <workItem from="1627950967475" duration="31000" />
     </task>
     <servers />
   </component>
