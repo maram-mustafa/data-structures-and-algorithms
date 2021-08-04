@@ -29,7 +29,7 @@ public class App {
 
 /////////////////////////////////////////////////////// code challenge 6 /////////////////////////////////////////////
 
-    //append method
+//    append method
 //    LinkedList list2 = new LinkedList();
 //    list2.append(1);
 //    list2.append(3);
@@ -72,7 +72,21 @@ public class App {
 /////////////////////////////////////////////////////// code challenge 8 /////////////////////////////////////////////
 
 
+    LinkedList zipList1 = new LinkedList();
+    zipList1.append(1);
+    zipList1.append(2);
+    zipList1.append(3);
 
+    System.out.println(zipList1.toString());
+
+    LinkedList zipList2 = new LinkedList();
+    zipList2.append(4);
+    zipList2.append(5);
+    zipList2.append(6);
+
+    System.out.println(zipList2.toString());
+
+    System.out.println(zipLists(zipList1,zipList2).toString());
 
   }
 }

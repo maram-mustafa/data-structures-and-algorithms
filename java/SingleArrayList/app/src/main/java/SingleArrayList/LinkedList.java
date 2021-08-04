@@ -50,9 +50,8 @@ public class LinkedList {
   }
 
 
-
   //////////////////////////////////////////////////////// code challenge 6///////////////////////////////////////////
-  public void append(int data){
+  public void append(int data) {
     Node appendNode = new Node(data);
     if (head == null) {
       head = appendNode;
@@ -87,7 +86,7 @@ public class LinkedList {
   }
 
 
-public  void insertAfter(int value, int newValue) {
+  public void insertAfter(int value, int newValue) {
     if (head != null) {
       if (value == tail.data) {
         Node newNode = new Node(newValue);
@@ -117,8 +116,8 @@ public  void insertAfter(int value, int newValue) {
 //////////////////////////////////////////////////////// code challenge 7 /////////////////////////////////////////////
 
 
-  public int linkedListKth(int number) throws IndexOutOfBoundsException  {
-    int length= 0;     // the value for n
+  public int linkedListKth(int number) throws IndexOutOfBoundsException {
+    int length = 0;     // the value for n
     Node current = head; // the first node for the pinter to check from
 
     while (current != null) {
@@ -140,7 +139,31 @@ public  void insertAfter(int value, int newValue) {
     }
     return current.data;
   }
-}
+
 
 /////////////////////////////////////////////////////// code challenge 8 /////////////////////////////////////////////
 
+  public  LinkedList zipLists(LinkedList firstList, LinkedList secondList) {
+
+    Node firstListNode = firstList.head;
+    Node secondListNode = secondList.head;
+    LinkedList thirdList = new LinkedList();
+
+    if (firstList == null) {
+      return secondList;
+    } else if (secondList == null) {
+      return firstList;
+    } else {
+      while (firstList != null && secondList != null) {
+         thirdList.append(firstListNode.data);
+         firstListNode=firstListNode.next;
+
+         if(secondListNode != null){
+           thirdList.append(secondListNode.data);
+           secondListNode=secondListNode.next;
+         }
+      }
+    }
+    return thirdList;
+  }
+}

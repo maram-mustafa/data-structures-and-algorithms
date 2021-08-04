@@ -182,4 +182,49 @@ public class AppTest {
   /////////////////////////////////////////////////////// code challenge 8 /////////////////////////////////////////////
 
 
+  //two lists same size
+  @Test public void testZipListsSameSize(){
+    LinkedList zipList1 = new LinkedList();
+    zipList1.append(1);
+    zipList1.append(2);
+    zipList1.append(3);
+    LinkedList zipList2 = new LinkedList();
+    zipList2.append(4);
+    zipList2.append(5);
+    zipList2.append(6);
+
+    String output = "{ 1 } -> { 4 } -> { 2 } -> { 5 } -> { 3 } -> { 6 } -> NULL";
+
+    assertEquals(" lists have same size",output,zipLists(zipList1,zipList2).toStr());
+  }
+
+  // 2 two lists different sizes
+  @Test public void testZipListsDifferentSize(){
+    LinkedList zipList1 = new LinkedList();
+    zipList1.append(1);
+    zipList1.append(2);
+    LinkedList zipList2 = new LinkedList();
+    zipList2.append(3);
+    zipList2.append(4);
+    zipList2.append(5);
+
+    String output = "{ 1 } -> { 3 } -> { 2 } -> { 4 } -> { 5 } -> NULL";
+
+    assertEquals(" different sizes",output,zipLists(zipList1,zipList2).toStr());
+  }
+
+  // 3 one list is empty
+  @Test public void testZipListsListEmpty(){
+    LinkedList zipList1 = new LinkedList();
+    LinkedList zipList2 = new LinkedList();
+    zipList2.append(5);
+    zipList2.append(9);
+    zipList2.append(4);
+
+    // output must be
+    String output = "{ 5 } -> { 9 } -> { 4 } -> NULL";
+
+    assertEquals("test when one list is empty",output,zipLists(zipList1,zipList2).toStr());
+  }
 }
+
