@@ -8,7 +8,46 @@ public class App {
         return "Hello World!";
     }
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+    public static void main(String[] args) throws Exception {
+      System.out.println(new App().getGreeting());
+
+      //////////////////////////////////////////// Stack Method////////////////////////////////////////////////////////
+
+      //stack - push
+      Stack<Integer> stackValue = new Stack<>();
+      stackValue.push(10);
+      stackValue.push(20);
+      stackValue.push(30);
+      stackValue.push(40);
+      System.out.println(stackValue.top.value);
+
+      //pop - stack
+      System.out.println(stackValue.pop());
+
+      //peek - stack
+      System.out.println(stackValue.peek());
+
+    //isEmpty - stack
+    System.out.println(stackValue.isEmpty());
+
+    //////////////////////////////////////////////// Queue Methods////////////////////////////////////////////////////
+
+      //enqueue - queue
+    Queue<Integer> queueValue = new Queue<>();
+      queueValue.enqueue(1);
+      queueValue.enqueue(2);
+      queueValue.enqueue(3);
+    System.out.println(queueValue.front.value);
+    System.out.println(queueValue.rear.value);
+
+      //dequeue - queue
+      System.out.println(queueValue.dequeue());
+
+      //peek  - queue
+     System.out.println(queueValue.peek());
+
+      //isEmpty - queue
+      System.out.println(queueValue.isEmpty());
     }
-}
+    }
+
