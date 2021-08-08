@@ -13,41 +13,57 @@ public class App {
 
       //////////////////////////////////////////// Stack Method////////////////////////////////////////////////////////
 
-      //stack - push
-      Stack<Integer> stackValue = new Stack<>();
-      stackValue.push(10);
-      stackValue.push(20);
-      stackValue.push(30);
-      stackValue.push(40);
-      System.out.println(stackValue.top.value);
+//      //stack - push
+//      Stack<Integer> stackValue = new Stack<>();
+//      stackValue.push(10);
+//      stackValue.push(20);
+//      stackValue.push(30);
+//      stackValue.push(40);
+//      System.out.println(stackValue.top.value);
+//
+//      //pop - stack
+//      System.out.println(stackValue.pop());
+//
+//      //peek - stack
+//      System.out.println(stackValue.peek());
+//
+//    //isEmpty - stack
+//    System.out.println(stackValue.isEmpty());
+//
+//    //////////////////////////////////////////////// Queue Methods////////////////////////////////////////////////////
+//
+//      //enqueue - queue
+//    Queue<Integer> queueValue = new Queue<>();
+//      queueValue.enqueue(1);
+//      queueValue.enqueue(2);
+//      queueValue.enqueue(3);
+//    System.out.println(queueValue.front.value);
+//    System.out.println(queueValue.rear.value);
+//
+//      //dequeue - queue
+//      System.out.println(queueValue.dequeue());
+//
+//      //peek  - queue
+//     System.out.println(queueValue.peek());
+//
+//      //isEmpty - queue
+//      System.out.println(queueValue.isEmpty());
 
-      //pop - stack
-      System.out.println(stackValue.pop());
+      ////////////////////////////////////// code challenge 11 //////////////////////////////////////////////////////
 
-      //peek - stack
-      System.out.println(stackValue.peek());
+      //enqueue
+      PseudoQueue<Integer> stackQueue = new PseudoQueue<>();
+      stackQueue.enqueue(10);
+      stackQueue.enqueue(20);
+      stackQueue.enqueue(30);
+      stackQueue.enqueue(40);
 
-    //isEmpty - stack
-    System.out.println(stackValue.isEmpty());
-
-    //////////////////////////////////////////////// Queue Methods////////////////////////////////////////////////////
-
-      //enqueue - queue
-    Queue<Integer> queueValue = new Queue<>();
-      queueValue.enqueue(1);
-      queueValue.enqueue(2);
-      queueValue.enqueue(3);
-    System.out.println(queueValue.front.value);
-    System.out.println(queueValue.rear.value);
-
-      //dequeue - queue
-      System.out.println(queueValue.dequeue());
-
-      //peek  - queue
-     System.out.println(queueValue.peek());
-
-      //isEmpty - queue
-      System.out.println(queueValue.isEmpty());
+      System.out.println(stackQueue.toString());
+      stackQueue.dequeue();
+      System.out.println(stackQueue.toString());
+      stackQueue.dequeue();
+      System.out.println(stackQueue.toString());
     }
     }
+
 
