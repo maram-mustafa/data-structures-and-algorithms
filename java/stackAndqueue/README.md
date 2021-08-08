@@ -23,3 +23,16 @@
 * Returns Boolean value if the queue or stack is empty.
 
 
+
+
+
+### challenge 11
+
+* enqueue:
+1. Inserts value 
+2. use FIFO  (first-in-first-out approach).
+* dequeue:
+1. Extracts a value
+2. use FIFO  (first-in-first-out approach).
+
+

@@ -183,6 +183,34 @@ public class AppTest {
       e.printStackTrace();
     }
   }
+
+  /////////////////////////////////// code challenge 11 ///////////////////////////////////////////////////////////////
+  //enqueue
+  @Test public void testPseudoQueue(){
+    PseudoQueue<Integer> stackQueue = new PseudoQueue<>();
+    stackQueue.enqueue(10);
+    stackQueue.enqueue(20);
+    stackQueue.enqueue(30);
+    stackQueue.enqueue(40);
+
+    // output should be :
+    String output = "[40]->[30]->[20]->[10]->";
+
+    assertEquals(output,stackQueue.toString());
+  }
+
+  //dequeue
+  @Test public void testPseudoQueue2() throws Exception {
+    PseudoQueue<Integer> stackQueue = new PseudoQueue<>();
+    stackQueue.enqueue(10);
+    stackQueue.enqueue(20);
+    stackQueue.enqueue(30);
+    stackQueue.enqueue(40);
+    stackQueue.dequeue();
+    String output = "[40]->[30]->[20]->";
+
+    assertEquals(output,stackQueue.toString());
+  }
 }
 
 
