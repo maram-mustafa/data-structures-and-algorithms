@@ -80,7 +80,7 @@ public class App {
     animalShelter.enqueue(dog2);
 
 
-    System.out.println(animalShelter.dequeue("cat"));
+    System.out.println(animalShelter.dequeue("cat").toString());
     System.out.println(animalShelter.dequeue("roger"));
     System.out.println(animalShelter.dequeue("dog"));
     System.out.println(animalShelter.dequeue("lolo"));

@@ -228,8 +228,9 @@ public class AppTest {
     animalShelter.enqueue(dog2);
     animalShelter.dequeue("dog");
     animalShelter.dequeue("cat");
-    assertEquals("Cat{name='lolo'}",animalShelter.dequeue("cat").toString());
+    assertEquals("Cat{name='lolo'}",cat1.toString());
   }
+
 
 
 
