@@ -211,6 +211,28 @@ public class AppTest {
 
     assertEquals(output,stackQueue.toString());
   }
+
+
+  ////////////////////////////////////////////// code challenge 12 ////////////////////////////////////////////////////
+
+  @Test
+  public void testAnimalSheltter() throws Exception {
+    AnimalShelter animalShelter = new AnimalShelter();
+
+    Cat cat1 = new Cat("lolo");
+    Cat cat2 = new Cat("viki");
+    Dog dog1 = new Dog("bella");
+    Dog dog2 = new Dog("roger");
+
+    animalShelter.enqueue(cat1);
+    animalShelter.enqueue(dog2);
+    animalShelter.dequeue("dog");
+    animalShelter.dequeue("cat");
+    assertEquals("Cat{name='lolo'}",animalShelter.dequeue("cat").toString());
+  }
+
+
+
 }
 
 

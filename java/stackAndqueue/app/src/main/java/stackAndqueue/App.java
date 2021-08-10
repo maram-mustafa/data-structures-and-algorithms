@@ -4,14 +4,14 @@
 package stackAndqueue;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+  public String getGreeting() {
+    return "Hello World!";
+  }
 
-    public static void main(String[] args) throws Exception {
-      System.out.println(new App().getGreeting());
+  public static void main(String[] args) throws Exception {
+    System.out.println(new App().getGreeting());
 
-      //////////////////////////////////////////// Stack Method////////////////////////////////////////////////////////
+    //////////////////////////////////////////// Stack Method////////////////////////////////////////////////////////
 
 //      //stack - push
 //      Stack<Integer> stackValue = new Stack<>();
@@ -49,21 +49,41 @@ public class App {
 //      //isEmpty - queue
 //      System.out.println(queueValue.isEmpty());
 
-      ////////////////////////////////////// code challenge 11 //////////////////////////////////////////////////////
+    ////////////////////////////////////// code challenge 11 //////////////////////////////////////////////////////
 
-      //enqueue
-      PseudoQueue<Integer> stackQueue = new PseudoQueue<>();
-      stackQueue.enqueue(10);
-      stackQueue.enqueue(20);
-      stackQueue.enqueue(30);
-      stackQueue.enqueue(40);
+    //enqueue
+//      PseudoQueue<Integer> stackQueue = new PseudoQueue<>();
+//      stackQueue.enqueue(10);
+//      stackQueue.enqueue(20);
+//      stackQueue.enqueue(30);
+//      stackQueue.enqueue(40);
+//
+//      System.out.println(stackQueue.toString());
+//      stackQueue.dequeue();
+//      System.out.println(stackQueue.toString());
+//      stackQueue.dequeue();
+//      System.out.println(stackQueue.toString());
+//    }
 
-      System.out.println(stackQueue.toString());
-      stackQueue.dequeue();
-      System.out.println(stackQueue.toString());
-      stackQueue.dequeue();
-      System.out.println(stackQueue.toString());
-    }
-    }
+    ////////////////////////////////////////// code challenge 12 /////////////////////////////////////////////////////
 
+    Cat cat1 = new Cat("lolo");
+    Cat cat2 = new Cat("viki");
+    Dog dog1 = new Dog("bella");
+    Dog dog2 = new Dog("roger");
+    AnimalShelter animalShelter = new AnimalShelter();
+
+
+    animalShelter.enqueue(cat1);
+    animalShelter.enqueue(cat2);
+    animalShelter.enqueue(dog1);
+    animalShelter.enqueue(dog2);
+
+
+    System.out.println(animalShelter.dequeue("cat"));
+    System.out.println(animalShelter.dequeue("roger"));
+    System.out.println(animalShelter.dequeue("dog"));
+    System.out.println(animalShelter.dequeue("lolo"));
+  }
+}
 
