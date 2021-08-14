@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6dfa231-c420-4ffd-bfc9-5a52d587999b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/stackAndqueue/BalancedBrackets.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/stackAndqueue/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/stackAndqueue/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/test/java/stackAndqueue/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/stackAndqueue/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -202,7 +200,7 @@
       <workItem from="1628458442005" duration="3041000" />
       <workItem from="1628466868161" duration="28000" />
       <workItem from="1628571958889" duration="2671000" />
-      <workItem from="1628943780649" duration="8145000" />
+      <workItem from="1628943780649" duration="9213000" />
     </task>
     <servers />
   </component>

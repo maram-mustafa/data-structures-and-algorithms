@@ -240,7 +240,7 @@ public class AppTest {
     assertFalse(BalancedBrackets.validateBrackets("}]"));
     assertTrue(BalancedBrackets.validateBrackets("{}{hi}[hey]()"));
   }
-  
+
 }
 
 
