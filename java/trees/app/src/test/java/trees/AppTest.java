@@ -11,4 +11,46 @@ public class AppTest {
         App classUnderTest = new App();
         assertNotNull("app should have a greeting", classUnderTest.getGreeting());
     }
+
+    //Can successfully instantiate an empty tree
+    @Test public void testEmptyTree(){
+      BinarySearchTree tree = new BinarySearchTree();
+      assertEquals("BinaryTree{root=null}" , tree.toString());
+    }
+
+   // Can successfully instantiate a tree with a single root node
+    @Test public void testSingleRoot(){
+      BinarySearchTree tree = new BinarySearchTree();
+      tree.add(5 , tree.root);
+      assertEquals("BinarySearchTree{root=Node{value=5, left=null, right=null}}",tree.toString());
+    }
+
+
+    //Can successfully add a left child and right child to a single root node
+  @Test public void testAdd(){
+    BinarySearchTree tree = new BinarySearchTree();
+    tree.add(5 , tree.root);
+    tree.add(8 , tree.root);
+    tree.add(3 , tree.root);
+    tree.add(6 , tree.root);
+
+    assertEquals("BinarySearchTree{root=Node{value=5, left=Node{value=3, left=null, right=null}, right=Node{value=8, left=Node{value=6, left=null, right=null}, right=null}}}",tree.toString());
+
+
+  }
+
+
+
+// // Can successfully return a collection from a preorder
+// @Test public void testPreorder(){
+//   BinarySearchTree tree = new BinarySearchTree();
+//   tree.add(5 , tree.root);
+//   tree.add(8 , tree.root);
+//   tree.add(3 , tree.root);
+//   tree.add(6 , tree.root);
+//
+////   assertEquals();
+// }
+
+
 }
