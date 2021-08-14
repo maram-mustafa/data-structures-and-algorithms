@@ -4,12 +4,8 @@
 package stackAndqueue;
 
 public class App {
-  public String getGreeting() {
-    return "Hello World!";
-  }
 
   public static void main(String[] args) throws Exception {
-    System.out.println(new App().getGreeting());
 
     //////////////////////////////////////////// Stack Method////////////////////////////////////////////////////////
 
@@ -66,24 +62,37 @@ public class App {
 //    }
 
     ////////////////////////////////////////// code challenge 12 /////////////////////////////////////////////////////
+//
+//    Cat cat1 = new Cat("lolo");
+//    Cat cat2 = new Cat("viki");
+//    Dog dog1 = new Dog("bella");
+//    Dog dog2 = new Dog("roger");
+//    AnimalShelter animalShelter = new AnimalShelter();
+//
+//
+//    animalShelter.enqueue(cat1);
+//    animalShelter.enqueue(cat2);
+//    animalShelter.enqueue(dog1);
+//    animalShelter.enqueue(dog2);
+//
+//
+//    System.out.println(animalShelter.dequeue("cat").toString());
+//    System.out.println(animalShelter.dequeue("roger"));
+//    System.out.println(animalShelter.dequeue("dog"));
+//    System.out.println(animalShelter.dequeue("lolo"));
 
-    Cat cat1 = new Cat("lolo");
-    Cat cat2 = new Cat("viki");
-    Dog dog1 = new Dog("bella");
-    Dog dog2 = new Dog("roger");
-    AnimalShelter animalShelter = new AnimalShelter();
 
 
-    animalShelter.enqueue(cat1);
-    animalShelter.enqueue(cat2);
-    animalShelter.enqueue(dog1);
-    animalShelter.enqueue(dog2);
+    ///////////////////////////////////// code challenge 13 /////////////////////////////////////////////////////////
 
 
-    System.out.println(animalShelter.dequeue("cat").toString());
-    System.out.println(animalShelter.dequeue("roger"));
-    System.out.println(animalShelter.dequeue("dog"));
-    System.out.println(animalShelter.dequeue("lolo"));
+    System.out.println(BalancedBrackets.validateBrackets("{(hello)"));
+    System.out.println(BalancedBrackets.validateBrackets("{}"));
+    System.out.println(BalancedBrackets.validateBrackets("}]"));
+    System.out.println(BalancedBrackets.validateBrackets("{}{hi}[hey]()"));
+
   }
+
+
 }
 
