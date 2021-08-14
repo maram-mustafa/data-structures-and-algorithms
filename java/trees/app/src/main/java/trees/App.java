@@ -13,14 +13,14 @@ public class App {
 
     BinarySearchTree tree = new BinarySearchTree();
 
-    tree.add(5, tree.root);
-    tree.add(8, tree.root);
-    tree.add(3, tree.root);
+    tree.add(5 , tree.root);
+    tree.add(8 , tree.root);
+    tree.add(3 , tree.root);
 
 
-        tree.preOrder(tree.root);
-//      tree.inOrder(tree.root);
-//      tree.postOrder(tree.root);
+//    System.out.println(tree.preOrder(tree.root));
+//    System.out.println(tree.inOrder(tree.root));
+    System.out.println(tree.postOrder(tree.root));
 
 //      System.out.println(tree.contains(5, tree.root));
 //      System.out.println(tree.contains(7, tree.root));

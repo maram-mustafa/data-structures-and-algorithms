@@ -1,6 +1,10 @@
 package trees;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class BinaryTree{
+  List trees = new ArrayList();
   Node  root;
 
   public BinaryTree() {
@@ -16,36 +20,39 @@ public class BinaryTree{
   }
 
   //pre-order
-public void preOrder(Node root){
-  System.out.println(root.value);
+public List preOrder(Node root){
+  trees.add(root.value);
   if(root.left != null){
     preOrder(root.left);
   }
   if(root.right !=null){
     preOrder(root.right);
   }
+  return trees;
 }
 
 // in-order
-  public void inOrder(Node root){
+  public List inOrder(Node root){
     if(root.left !=null){
       inOrder(root.left);
     }
-    System.out.println(root.value);
+    trees.add(root.value);
     if(root.right != null){
       inOrder(root.right);
     }
+    return trees;
   }
 
   //post-order
-  public void postOrder(Node root){
+  public List postOrder(Node root){
     if(root.left != null){
       postOrder(root.left);
     }
     if(root.right != null){
       postOrder(root.right);
     }
-    System.out.println(root.value);
+    trees.add(root.value);
+    return trees;
   }
 
 

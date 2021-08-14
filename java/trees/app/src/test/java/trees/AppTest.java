@@ -4,6 +4,10 @@
 package trees;
 
 import org.junit.Test;
+
+import java.util.Arrays;
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 public class AppTest {
@@ -15,7 +19,7 @@ public class AppTest {
     //Can successfully instantiate an empty tree
     @Test public void testEmptyTree(){
       BinarySearchTree tree = new BinarySearchTree();
-      assertEquals("BinaryTree{root=null}" , tree.toString());
+      assertEquals("BinarySearchTree{root=null}" , tree.toString());
     }
 
    // Can successfully instantiate a tree with a single root node
@@ -35,22 +39,49 @@ public class AppTest {
     tree.add(6 , tree.root);
 
     assertEquals("BinarySearchTree{root=Node{value=5, left=Node{value=3, left=null, right=null}, right=Node{value=8, left=Node{value=6, left=null, right=null}, right=null}}}",tree.toString());
-
-
   }
 
 
 
 // // Can successfully return a collection from a preorder
-// @Test public void testPreorder(){
-//   BinarySearchTree tree = new BinarySearchTree();
-//   tree.add(5 , tree.root);
-//   tree.add(8 , tree.root);
-//   tree.add(3 , tree.root);
-//   tree.add(6 , tree.root);
-//
-////   assertEquals();
-// }
+@Test
+public void testPreOrder() {
+  BinarySearchTree tree = new BinarySearchTree();
+  tree.add(5 , tree.root);
+  tree.add(8 , tree.root);
+  tree.add(3 , tree.root);
+
+  // output must be
+  List trees = Arrays.asList(5 ,3 ,8);
+  assertEquals(trees,tree.preOrder(tree.root));
+}
+
+//Can successfully return a collection from an inorder traversal
+  @Test
+  public void testInOrder() {
+    BinarySearchTree tree = new BinarySearchTree();
+    tree.add(5 , tree.root);
+    tree.add(8 , tree.root);
+    tree.add(3 , tree.root);
+
+    // output must be
+    List trees = Arrays.asList(3 ,5 ,8);
+    assertEquals(trees,tree.inOrder(tree.root));
+  }
+
+
+  //Can successfully return a collection from a postorder traversal
+  @Test
+  public void testPostOrder() {
+    BinarySearchTree tree = new BinarySearchTree();
+    tree.add(5 , tree.root);
+    tree.add(8 , tree.root);
+    tree.add(3 , tree.root);
+
+    // output must be
+    List trees = Arrays.asList(3 ,8 ,5);
+    assertEquals(trees,tree.postOrder(tree.root));
+  }
 
 
 }
