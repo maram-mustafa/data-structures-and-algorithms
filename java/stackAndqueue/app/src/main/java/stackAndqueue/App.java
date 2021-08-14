@@ -50,19 +50,26 @@ public class App {
 //      System.out.println(queueValue.isEmpty());
 
       ////////////////////////////////////// code challenge 11 //////////////////////////////////////////////////////
+//
+//      //enqueue
+//      PseudoQueue<Integer> stackQueue = new PseudoQueue<>();
+//      stackQueue.enqueue(10);
+//      stackQueue.enqueue(20);
+//      stackQueue.enqueue(30);
+//      stackQueue.enqueue(40);
+//
+//      System.out.println(stackQueue.toString());
+//      stackQueue.dequeue();
+//      System.out.println(stackQueue.toString());
+//      stackQueue.dequeue();
+//      System.out.println(stackQueue.toString());
+//    }
 
-      //enqueue
-      PseudoQueue<Integer> stackQueue = new PseudoQueue<>();
-      stackQueue.enqueue(10);
-      stackQueue.enqueue(20);
-      stackQueue.enqueue(30);
-      stackQueue.enqueue(40);
 
-      System.out.println(stackQueue.toString());
-      stackQueue.dequeue();
-      System.out.println(stackQueue.toString());
-      stackQueue.dequeue();
-      System.out.println(stackQueue.toString());
+      ////////////////////////////////////// code challenge 13//////////////////////////////////////////////////////
+
+
+
     }
     }
 
