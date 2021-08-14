@@ -36,3 +36,6 @@
 2. use FIFO  (first-in-first-out approach).
 
 
+
+### chalenge 13
+* validateBrackets > validate brackets and return whether or not the brackets in the string are balanced.
