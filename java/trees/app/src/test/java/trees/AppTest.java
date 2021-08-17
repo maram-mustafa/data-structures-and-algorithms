@@ -102,4 +102,22 @@ public class AppTest {
 
   }
 
+  ////////////////////////////////////////// code challenge 17 //////////////////////////////////////////////////////
+
+  @Test
+  public  void testBreadthFirst() throws Exception {
+    BinarySearchTree tree = new BinarySearchTree();
+    tree.add(1 , tree.root);
+    tree.add(2 , tree.root);
+    tree.add(3 , tree.root);
+    tree.add(4 , tree.root);
+    tree.add(5 , tree.root);
+    tree.add(6 , tree.root);
+    tree.add(7 , tree.root);
+
+
+    List breadth = Arrays.asList(1,3,2,4,5,7,6);
+    assertEquals(breadth,tree.breadthFirst(tree));
+
+  }
 }

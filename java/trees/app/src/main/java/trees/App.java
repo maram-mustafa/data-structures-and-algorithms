@@ -8,7 +8,7 @@ public class App {
     return "Hello World!";
   }
 
-  public static void main(String[] args) {
+  public static void main(String[] args) throws Exception {
     System.out.println(new App().getGreeting());
 
 //    BinarySearchTree tree = new BinarySearchTree();
@@ -28,31 +28,46 @@ public class App {
 
 
     /////////////////////////////////// code challenge 16 ///////////////////////////////
+//    BinarySearchTree tree = new BinarySearchTree();
+//
+//
+//    tree.root = new Node(2);
+//    tree.root.left = new Node(6);
+//    tree.root.right = new Node(4);
+//    tree.root.left.right = new Node(5);
+//    tree.root.left.right.left = new Node(1);
+//    tree.root.right.right = new Node(10);
+//    tree.add(5, tree.root);
+//    tree.add(8, tree.root);
+//    tree.add(3, tree.root);
+//
+//    System.out.println("-------------preOrder-----------");
+//    System.out.println(tree.preOrder(tree.root));
+//    System.out.println("-------------inOrder-----------");
+//    System.out.println(tree.inOrder(tree.root));
+//    System.out.println("-------------postOrder-----------");
+//    System.out.println(tree.postOrder(tree.root));
+//
+//      System.out.println(tree.contains(5, tree.root));
+//      System.out.println(tree.contains(7, tree.root));
+//      System.out.println(tree.contains(6, tree.root));
+//
+//
+//    System.out.println(tree.maximum(tree.root));
+
+
+    /////////////////////////////////////////// code challenge 17 //////////////////////////////////////////////////
+
     BinarySearchTree tree = new BinarySearchTree();
+    tree.add(1 , tree.root);
+    tree.add(2 , tree.root);
+    tree.add(3 , tree.root);
+    tree.add(4 , tree.root);
+    tree.add(5 , tree.root);
+    tree.add(6 , tree.root);
+    tree.add(7 , tree.root);
 
+    System.out.println(tree.breadthFirst(tree));
 
-    tree.root = new Node(2);
-    tree.root.left = new Node(6);
-    tree.root.right = new Node(4);
-    tree.root.left.right = new Node(5);
-    tree.root.left.right.left = new Node(1);
-    tree.root.right.right = new Node(10);
-    tree.add(5, tree.root);
-    tree.add(8, tree.root);
-    tree.add(3, tree.root);
-
-    System.out.println("-------------preOrder-----------");
-    System.out.println(tree.preOrder(tree.root));
-    System.out.println("-------------inOrder-----------");
-    System.out.println(tree.inOrder(tree.root));
-    System.out.println("-------------postOrder-----------");
-    System.out.println(tree.postOrder(tree.root));
-
-      System.out.println(tree.contains(5, tree.root));
-      System.out.println(tree.contains(7, tree.root));
-      System.out.println(tree.contains(6, tree.root));
-
-
-    System.out.println(tree.maximum(tree.root));
   }
 }
