@@ -99,8 +99,8 @@ public void testPreOrder() {
 //  System.out.println(tree.maximum(tree.root));
 
     assertEquals(10,tree.maximum(tree.root));
+
     
   }
-
 
 }
