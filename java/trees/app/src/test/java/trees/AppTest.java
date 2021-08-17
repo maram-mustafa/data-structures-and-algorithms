@@ -84,4 +84,23 @@ public void testPreOrder() {
   }
 
 
+  ////////////////////////////////// code challenge 16//////////////////////////////////////////////////////////
+  @Test
+  public void testMAxTree(){
+    BinarySearchTree tree = new BinarySearchTree();
+
+    tree.root = new Node(2);
+    tree.root.left = new Node(6);
+    tree.root.right = new Node(4);
+    tree.root.left.right = new Node(5);
+    tree.root.left.right.left = new Node(1);
+    tree.root.right.right = new Node(10);
+
+//  System.out.println(tree.maximum(tree.root));
+
+    assertEquals(10,tree.maximum(tree.root));
+    
+  }
+
+
 }

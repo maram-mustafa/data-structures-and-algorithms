@@ -62,4 +62,30 @@ public List preOrder(Node root){
       "root=" + root +
       '}';
   }
+
+  ///////////////////////////////////////// code challenge 16////////////////////////
+
+  public int  maximum (Node root){
+
+//Check whether tree is empty
+    if(root == null) {
+      System.out.println("Tree is empty");
+      return 0;
+    }
+    else{
+      int leftMax;
+      int rightMax;
+      int max = root.value;
+
+      if(root.left != null){
+        leftMax = maximum(root.left);
+        max = Math.max(max, leftMax);
+      }
+      if(root.right != null){
+        rightMax = maximum(root.right);
+        max = Math.max(max, rightMax);
+      }
+      return max;
+    }
+  }
 }

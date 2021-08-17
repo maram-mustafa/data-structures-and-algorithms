@@ -11,21 +11,32 @@ public class App {
   public static void main(String[] args) {
     System.out.println(new App().getGreeting());
 
+//    BinarySearchTree tree = new BinarySearchTree();
+//
+//    tree.add(5 , tree.root);
+//    tree.add(8 , tree.root);
+//    tree.add(3 , tree.root);
+//
+//
+////    System.out.println(tree.preOrder(tree.root));
+////    System.out.println(tree.inOrder(tree.root));
+//    System.out.println(tree.postOrder(tree.root));
+//
+////      System.out.println(tree.contains(5, tree.root));
+////      System.out.println(tree.contains(7, tree.root));
+////      System.out.println(tree.contains(6, tree.root));
+
+
+    /////////////////////////////////// code challenge 16 ///////////////////////////////
     BinarySearchTree tree = new BinarySearchTree();
 
-    tree.add(5 , tree.root);
-    tree.add(8 , tree.root);
-    tree.add(3 , tree.root);
+    tree.root = new Node(2);
+    tree.root.left = new Node(6);
+    tree.root.right = new Node(4);
+    tree.root.left.right = new Node(5);
+    tree.root.left.right.left = new Node(1);
+    tree.root.right.right = new Node(10);
 
-
-//    System.out.println(tree.preOrder(tree.root));
-//    System.out.println(tree.inOrder(tree.root));
-    System.out.println(tree.postOrder(tree.root));
-
-//      System.out.println(tree.contains(5, tree.root));
-//      System.out.println(tree.contains(7, tree.root));
-//      System.out.println(tree.contains(6, tree.root));
-
-
+    System.out.println(tree.maximum(tree.root));
   }
 }
