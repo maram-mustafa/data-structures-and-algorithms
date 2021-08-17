@@ -30,12 +30,30 @@ public class App {
     /////////////////////////////////// code challenge 16 ///////////////////////////////
     BinarySearchTree tree = new BinarySearchTree();
 
+<<<<<<< HEAD
     tree.root = new Node(2);
     tree.root.left = new Node(6);
     tree.root.right = new Node(4);
     tree.root.left.right = new Node(5);
     tree.root.left.right.left = new Node(1);
     tree.root.right.right = new Node(10);
+=======
+    tree.add(5, tree.root);
+    tree.add(8, tree.root);
+    tree.add(3, tree.root);
+
+    System.out.println("-------------preOrder-----------");
+    System.out.println(tree.preOrder(tree.root));
+    System.out.println("-------------inOrder-----------");
+    System.out.println(tree.inOrder(tree.root));
+    System.out.println("-------------postOrder-----------");
+    System.out.println(tree.postOrder(tree.root));
+
+      System.out.println(tree.contains(5, tree.root));
+      System.out.println(tree.contains(7, tree.root));
+      System.out.println(tree.contains(6, tree.root));
+
+>>>>>>> 24a372d15473dacaaf9c51c4caf3be64d527c775
 
     System.out.println(tree.maximum(tree.root));
   }
