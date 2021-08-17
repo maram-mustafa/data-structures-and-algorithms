@@ -11,77 +11,113 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 public class AppTest {
-    @Test public void testAppHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull("app should have a greeting", classUnderTest.getGreeting());
-    }
+//  @Test
+//  public void testAppHasAGreeting() {
+//    App classUnderTest = new App();
+//    assertNotNull("app should have a greeting", classUnderTest.getGreeting());
+//  }
+//
+//  //Can successfully instantiate an empty tree
+//  @Test
+//  public void testEmptyTree() {
+//    BinarySearchTree tree = new BinarySearchTree();
+//    assertEquals("BinarySearchTree{root=null}", tree.toString());
+//  }
+//
+//  // Can successfully instantiate a tree with a single root node
+//  @Test
+//  public void testSingleRoot() {
+//    BinarySearchTree tree = new BinarySearchTree();
+//    tree.add(5, tree.root);
+//    assertEquals("BinarySearchTree{root=Node{value=5, left=null, right=null}}", tree.toString());
+//  }
+//
+//  //Can successfully add a left child and right child to a single root node
+//  @Test
+//  public void testAdd() {
+//    BinarySearchTree tree = new BinarySearchTree();
+//    tree.add(5, tree.root);
+//    tree.add(8, tree.root);
+//    tree.add(3, tree.root);
+//    tree.add(6, tree.root);
+//
+//    assertEquals("BinarySearchTree{root=Node{value=5, left=Node{value=3, left=null, right=null}, right=Node{value=8, left=Node{value=6, left=null, right=null}, right=null}}}", tree.toString());
+//  }
+//
+//
+//  // Can successfully return a collection from a preorder
+//  @Test
+//  public void testPreOrder() {
+//    BinarySearchTree tree = new BinarySearchTree();
+//    tree.add(5, tree.root);
+//    tree.add(8, tree.root);
+//    tree.add(3, tree.root);
+//
+//    List trees = Arrays.asList(5, 3, 8);
+//    assertEquals(trees, tree.preOrder(tree.root));
+//  }
+//
+//  //Can successfully return a collection from an inorder traversal
+//  @Test
+//  public void testInOrder() {
+//    BinarySearchTree tree = new BinarySearchTree();
+//    tree.add(5, tree.root);
+//    tree.add(8, tree.root);
+//    tree.add(3, tree.root);
+//
+//    List trees = Arrays.asList(3, 5, 8);
+//    assertEquals(trees, tree.inOrder(tree.root));
+//  }
+//
+//  //Can successfully return a collection from a postorder traversal
+//  @Test
+//  public void testPostOrder() {
+//    BinarySearchTree tree = new BinarySearchTree();
+//    tree.add(5, tree.root);
+//    tree.add(8, tree.root);
+//    tree.add(3, tree.root);
+//
+//    List trees = Arrays.asList(3, 8, 5);
+//    assertEquals(trees, tree.postOrder(tree.root));
+//  }
 
-    //Can successfully instantiate an empty tree
-    @Test public void testEmptyTree(){
-      BinarySearchTree tree = new BinarySearchTree();
-      assertEquals("BinarySearchTree{root=null}" , tree.toString());
-    }
-
-   // Can successfully instantiate a tree with a single root node
-    @Test public void testSingleRoot(){
-      BinarySearchTree tree = new BinarySearchTree();
-      tree.add(5 , tree.root);
-      assertEquals("BinarySearchTree{root=Node{value=5, left=null, right=null}}",tree.toString());
-    }
 
 
-    //Can successfully add a left child and right child to a single root node
-  @Test public void testAdd(){
+  ////////////////////////////////// code challenge 16//////////////////////////////////////////////////////////
+  @Test
+  public void testMAxTree(){
     BinarySearchTree tree = new BinarySearchTree();
-    tree.add(5 , tree.root);
-    tree.add(8 , tree.root);
+
+    tree.root = new Node(2);
+    tree.root.left = new Node(6);
+    tree.root.right = new Node(4);
+    tree.root.left.right = new Node(5);
+    tree.root.left.right.left = new Node(1);
+    tree.root.right.right = new Node(10);
+
+//  System.out.println(tree.maximum(tree.root));
+
+    assertEquals(10,tree.maximum(tree.root));
+
+
+  }
+
+  ////////////////////////////////////////// code challenge 17 //////////////////////////////////////////////////////
+
+  @Test
+  public  void testBreadthFirst() throws Exception {
+    BinarySearchTree tree = new BinarySearchTree();
+    tree.add(1 , tree.root);
+    tree.add(2 , tree.root);
     tree.add(3 , tree.root);
+    tree.add(4 , tree.root);
+    tree.add(5 , tree.root);
     tree.add(6 , tree.root);
+    tree.add(7 , tree.root);
 
-    assertEquals("BinarySearchTree{root=Node{value=5, left=Node{value=3, left=null, right=null}, right=Node{value=8, left=Node{value=6, left=null, right=null}, right=null}}}",tree.toString());
+
+    List breadth = Arrays.asList(1,3,2,4,5,7,6);
+    assertEquals(breadth,tree.breadthFirst(tree));
+
   }
-
-
-
-// // Can successfully return a collection from a preorder
-@Test
-public void testPreOrder() {
-  BinarySearchTree tree = new BinarySearchTree();
-  tree.add(5 , tree.root);
-  tree.add(8 , tree.root);
-  tree.add(3 , tree.root);
-
-  // output must be
-  List trees = Arrays.asList(5 ,3 ,8);
-  assertEquals(trees,tree.preOrder(tree.root));
-}
-
-//Can successfully return a collection from an inorder traversal
-  @Test
-  public void testInOrder() {
-    BinarySearchTree tree = new BinarySearchTree();
-    tree.add(5 , tree.root);
-    tree.add(8 , tree.root);
-    tree.add(3 , tree.root);
-
-    // output must be
-    List trees = Arrays.asList(3 ,5 ,8);
-    assertEquals(trees,tree.inOrder(tree.root));
-  }
-
-
-  //Can successfully return a collection from a postorder traversal
-  @Test
-  public void testPostOrder() {
-    BinarySearchTree tree = new BinarySearchTree();
-    tree.add(5 , tree.root);
-    tree.add(8 , tree.root);
-    tree.add(3 , tree.root);
-
-    // output must be
-    List trees = Arrays.asList(3 ,8 ,5);
-    assertEquals(trees,tree.postOrder(tree.root));
-  }
-
-
 }
