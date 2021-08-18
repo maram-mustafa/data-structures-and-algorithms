@@ -29,12 +29,12 @@ Space: O(n)
 
 
 challenge 16:
-![challenge16]((trees/codechallenge16.PNG)
+![challenge16](codechallenge16.PNG)
 
 challenge 17 : 
 
-![challenge17]((trees/codechallenge17.PNG))
+![challenge17](codechallenge17.PNG)
 
 
 challenge 18 :
-![challenge18](trees/codechallenge18.PNG)
+![challenge18](codechallenge18.PNG)
