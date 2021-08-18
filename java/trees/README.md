@@ -28,7 +28,12 @@ Time: O(n)
 Space: O(n)
 
 
+challenge 16:
+![challenge16]((trees/codechallenge16.PNG)
 
+challenge 17 : 
+
+![challenge17]((trees/codechallenge17.PNG))
 
 
 challenge 18 :
