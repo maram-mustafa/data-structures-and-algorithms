@@ -1,6 +1,6 @@
 package trees;
 
-public class KTreeNode{
+public class KTreeNode {
   int data;
   KTreeNode children[];
 
