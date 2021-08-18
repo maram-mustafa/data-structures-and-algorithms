@@ -84,40 +84,58 @@ public class AppTest {
 
 
   ////////////////////////////////// code challenge 16//////////////////////////////////////////////////////////
-  @Test
-  public void testMAxTree(){
-    BinarySearchTree tree = new BinarySearchTree();
-
-    tree.root = new Node(2);
-    tree.root.left = new Node(6);
-    tree.root.right = new Node(4);
-    tree.root.left.right = new Node(5);
-    tree.root.left.right.left = new Node(1);
-    tree.root.right.right = new Node(10);
-
-//  System.out.println(tree.maximum(tree.root));
-
-    assertEquals(10,tree.maximum(tree.root));
-
-
-  }
+//  @Test
+//  public void testMAxTree(){
+//    BinarySearchTree tree = new BinarySearchTree();
+//
+//    tree.root = new Node(2);
+//    tree.root.left = new Node(6);
+//    tree.root.right = new Node(4);
+//    tree.root.left.right = new Node(5);
+//    tree.root.left.right.left = new Node(1);
+//    tree.root.right.right = new Node(10);
+//
+////  System.out.println(tree.maximum(tree.root));
+//
+//    assertEquals(10,tree.maximum(tree.root));
+//
+//
+//  }
 
   ////////////////////////////////////////// code challenge 17 //////////////////////////////////////////////////////
 
-  @Test
-  public  void testBreadthFirst() throws Exception {
-    BinarySearchTree tree = new BinarySearchTree();
-    tree.add(1 , tree.root);
-    tree.add(2 , tree.root);
-    tree.add(3 , tree.root);
-    tree.add(4 , tree.root);
-    tree.add(5 , tree.root);
-    tree.add(6 , tree.root);
-    tree.add(7 , tree.root);
+//  @Test
+//  public  void testBreadthFirst() throws Exception {
+//    BinarySearchTree tree = new BinarySearchTree();
+//    tree.add(1 , tree.root);
+//    tree.add(2 , tree.root);
+//    tree.add(3 , tree.root);
+//    tree.add(4 , tree.root);
+//    tree.add(5 , tree.root);
+//    tree.add(6 , tree.root);
+//    tree.add(7 , tree.root);
+//
+//
+//    List breadth = Arrays.asList(1,3,2,4,5,7,6);
+//    assertEquals(breadth,tree.breadthFirst(tree));
+//
+//  }
+
+  /////////////////////////////////// code challenge 18 /////////////////////////////////////////////////////////
+
+//  @Test
+//  public void testFizzBuzz(){
+//    int k = 3;
+//    KTreeNode root = new KTreeNode(k, 1);
+//    root.children[0] = new KTreeNode(k, 2);
+//    root.children[1] = new KTreeNode(k, 3);
+//    root.children[2] = new KTreeNode(k, 4);
+//    root.children[0].children[0] = new KTreeNode(k, 5);
+//    root.children[0].children[1] = new KTreeNode(k, 6);
+//    root.children[0].children[2] = new KTreeNode(k, 7);
+//
+//    assertEquals("Buzz, Fizz, 2, 7, Fizz, 1, 4", FizzBuzz(root).toString());
+//  }
 
 
-    List breadth = Arrays.asList(1,3,2,4,5,7,6);
-    assertEquals(breadth,tree.breadthFirst(tree));
-
-  }
 }

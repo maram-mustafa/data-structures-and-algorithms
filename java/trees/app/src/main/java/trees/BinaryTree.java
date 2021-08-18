@@ -113,7 +113,7 @@ public class BinaryTree {
   ///////////////////////////////////////////// code challenge 18 ////////////////////////////////////////////////////
 
   public static List<String> kTree = new ArrayList<>();
-  public static List<String> FizzBuzz(KTreeNode node) {
+  public  List<String> FizzBuzz(KTreeNode node) {
 
     for (int i = 0; i < node.children.length - 1; i++) {
       FizzBuzz(node.children[i]);

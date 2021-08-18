@@ -3,6 +3,9 @@
  */
 package trees;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class App {
   public String getGreeting() {
     return "Hello World!";
@@ -58,16 +61,32 @@ public class App {
 
     /////////////////////////////////////////// code challenge 17 //////////////////////////////////////////////////
 
-    BinarySearchTree tree = new BinarySearchTree();
-    tree.add(1 , tree.root);
-    tree.add(2 , tree.root);
-    tree.add(3 , tree.root);
-    tree.add(4 , tree.root);
-    tree.add(5 , tree.root);
-    tree.add(6 , tree.root);
-    tree.add(7 , tree.root);
+//    BinarySearchTree tree = new BinarySearchTree();
+//    tree.add(1 , tree.root);
+//    tree.add(2 , tree.root);
+//    tree.add(3 , tree.root);
+//    tree.add(4 , tree.root);
+//    tree.add(5 , tree.root);
+//    tree.add(6 , tree.root);
+//    tree.add(7 , tree.root);
+//
+//    System.out.println(tree.breadthFirst(tree));
 
-    System.out.println(tree.breadthFirst(tree));
+    /////////////////////////////////////////////////// code challenge 18 /////////////////////////////////////////////
+
+
+    List<String> kTree = new ArrayList<>();
+    int k = 3;
+    KTreeNode root = new KTreeNode(k, 1);
+    root.children[0] = new KTreeNode(k, 2);
+    root.children[1] = new KTreeNode(k, 3);
+    root.children[2] = new KTreeNode(k, 4);
+    root.children[0].children[0] = new KTreeNode(k, 5);
+    root.children[0].children[1] = new KTreeNode(k, 6);
+    root.children[0].children[2] = new KTreeNode(k, 7);
+
+    System.out.println(kTree);
+
 
   }
 }
