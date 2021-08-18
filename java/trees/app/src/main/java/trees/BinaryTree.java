@@ -3,24 +3,14 @@ package trees;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BinaryTree {
-  List trees = new ArrayList();
-  Node root;
+public class BinaryTree<T> {
+  public Node<T> root;
+  private List<T> trees = new ArrayList<>();
 
-  public BinaryTree() {
-    this.root = null;
-  }
-
-  public Node getRoot() {
-    return root;
-  }
-
-  public void setRoot(Node root) {
-    this.root = root;
-  }
+/////////////////////////////////////////////////code challenge 15 ////////////////////////////////////
 
   //pre-order
-  public List preOrder(Node root) {
+  public List<T> preOrder(Node<T> root) {
     trees.add(root.value);
     if (root.left != null) {
       preOrder(root.left);
@@ -31,8 +21,9 @@ public class BinaryTree {
     return trees;
   }
 
+
   // in-order
-  public List inOrder(Node root) {
+  public List<T> inOrder(Node<T> root) {
     if (root.left != null) {
       inOrder(root.left);
     }
@@ -44,7 +35,7 @@ public class BinaryTree {
   }
 
   //post-order
-  public List postOrder(Node root) {
+  public List<T> postOrder(Node<T> root) {
     if (root.left != null) {
       postOrder(root.left);
     }
@@ -55,7 +46,6 @@ public class BinaryTree {
     return trees;
   }
 
-
   @Override
   public String toString() {
     return "BinaryTree{" +
@@ -65,9 +55,8 @@ public class BinaryTree {
 
   ///////////////////////////////////////// code challenge 16////////////////////////
 
-  public int maximum(Node root) {
+  public int maximum(Node<Integer> root) {
 
-//Check whether tree is empty
     if (root == null) {
       System.out.println("Tree is empty");
       return 0;
@@ -90,15 +79,16 @@ public class BinaryTree {
 
   ///////////////////////////////////////////////// code  challenge 17 ////////////////////////////////////////////
 
-  public List<Integer> breadthFirst(BinarySearchTree tree) throws Exception {
+  public List<Integer> breadthFirst(BinarySearchTree<T> tree) throws Exception {
+    Queue<Node> breadth = new Queue<>();
 
-    Queue breadth = new Queue();
     if (root != null) {
       breadth.enqueue(root);
     }
+
     while (!breadth.isEmpty()) {
       Node front = breadth.dequeue();
-      trees.add(front.value);
+      trees.add((T) front.value);
 
       if (front.left != null) {
         breadth.enqueue(front.left);
@@ -107,6 +97,7 @@ public class BinaryTree {
         }
       }
     }
-    return trees;
+    return (List<Integer>) trees;
   }
 }
+
