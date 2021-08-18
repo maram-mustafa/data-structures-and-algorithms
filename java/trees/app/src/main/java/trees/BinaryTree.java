@@ -114,32 +114,20 @@ public class BinaryTree {
 
   public static List<String> kTree = new ArrayList<>();
   public static List<String> FizzBuzz(KTreeNode node) {
-//    if (node == null) {
-//      return kTree;
-//    }
 
-    // Total children count
-    int total = node.children.length;
-    // All the children except the last
-    for (int i = 0; i < total - 1; i++)
+    for (int i = 0; i < node.children.length - 1; i++) {
       FizzBuzz(node.children[i]);
-
-    if(node.data %3 == 0 && node.data %5 == 0)
-      kTree.add("FizzBuzz");
-    else if(node.data %3 == 0)
-      kTree.add("Fizz");
-    else if(node.data %5 == 0)
-      kTree.add("Buzz");
-    else{
-      String str = Integer.toString(node.data);
-      kTree.add(str);
+      if (node.data % 3 == 0 && node.data % 5 == 0) {
+        kTree.add("FizzBuzz");
+      } else if (node.data % 3 == 0) {
+        kTree.add("Fizz");
+      } else if (node.data % 5 == 0) {
+        kTree.add("Buzz");
+      } else {
+        String str = Integer.toString(node.data);
+        kTree.add(str);
+      }
     }
-    // Last child
-    FizzBuzz(node.children[total - 1]);
-
     return kTree;
   }
-
-
-
 }
