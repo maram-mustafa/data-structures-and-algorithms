@@ -38,3 +38,9 @@ challenge 17 :
 
 challenge 18 :
 ![challenge18](codechallenge18.PNG)
+
+
+
+challenge 18 :
+![challenge18](trees/codechallenge18.PNG)
+
