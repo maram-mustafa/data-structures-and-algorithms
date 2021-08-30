@@ -46,6 +46,12 @@ public class AppTest {
     int[] arr = {2, 3, 5, 7, 13, 11};
     assertEquals("[2, 3, 5, 7, 11, 13]", Arrays.toString(App.insertionSort(arr)));
   }
+//////////////////////////////////////////////////////// code challenge 27 ////////////////////////////////////////////
 
+  @Test
+  public void mergeSortTest() {
+    int[] arr = {8, 4, 23, 42, 16, 15};
+    assertEquals("[4, 8, 15, 16, 23, 42]", Arrays.toString(App.mergeSort(arr)));
+  }
 
 }

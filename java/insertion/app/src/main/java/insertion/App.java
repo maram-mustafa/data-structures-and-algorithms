@@ -11,6 +11,7 @@ public class App {
   }
 
 
+  /////////////////////////////////////// code challenge 26 //////////////////////////////////////////////////////////
   public static int[] insertionSort(int[] arr) {
     for (int i = 1; i < arr.length; i++) {
       int j = i - 1;
@@ -25,22 +26,69 @@ public class App {
     return arr;
   }
 
+  //////////////////////////////////////// code challenge 27 //////////////////////////////////////////////////////////
+
+  public static int[] merge(int[] l, int[] r, int[] arr) {
+    int i = 0;
+    int j = 0;
+    int k = 0;
+
+    while (i < l.length && j < r.length) {
+      if (l[i] <= r[j]) {
+        arr[k] = l[i];
+        i++;
+      } else {
+        arr[k] = r[j];
+        j++;
+      }
+      k++;
+    }
+    if (i == l.length) {
+      arr[k] = l[i++];
+    } else {
+    arr[k]= r[j++];
+    }
+    return arr;
+  }
+
+  public static int[] mergeSort(int[] arr) {
+    int n = arr.length;
+    if (n > 1) {
+      int mid = n / 2;
+      int[] l = new int[mid];
+      int[] r = new int[n - mid];
+
+      mergeSort(l);
+      mergeSort(r);
+      merge(l, r, arr);
+    }
+
+    return arr;
+  }
+
+
   public static void main(String[] args) {
     System.out.println(new App().getGreeting());
 
+//    int[] arr = {8, 4, 23, 42, 16, 15};
+//    System.out.println(Arrays.toString(insertionSort(arr)));
+//
+//    //Reverse-sorted
+//    int[] arr1 = {20, 18, 12, 8, 5, -2};
+//    System.out.println(Arrays.toString(insertionSort(arr1)));
+//
+//    //few uniques
+//    int[] arr2 = {5, 12, 7, 5, 5, 7};
+//    System.out.println(Arrays.toString(insertionSort(arr2)));
+//
+//    //Nearly-sorted
+//    int[] arr3 = {2, 3, 5, 7, 13, 11};
+//    System.out.println(Arrays.toString(insertionSort(arr3)));
+//
+
     int[] arr = {8, 4, 23, 42, 16, 15};
-    System.out.println(Arrays.toString(insertionSort(arr)));
+    System.out.println(Arrays.toString(mergeSort(arr)));
 
-    //Reverse-sorted
-    int[] arr1 = {20,18,12,8,5,-2};
-    System.out.println(Arrays.toString(insertionSort(arr1)));
-
-    //few uniques
-    int[] arr2 = {5,12,7,5,5,7};
-    System.out.println(Arrays.toString(insertionSort(arr2)));
-
-    //Nearly-sorted
-    int[] arr3 = {2,3,5,7,13,11};
-    System.out.println(Arrays.toString(insertionSort(arr3)));
   }
+
 }
