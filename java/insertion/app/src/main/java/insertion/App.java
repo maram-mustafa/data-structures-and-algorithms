@@ -95,4 +95,22 @@ public class App {
 
   }
 
+  public static void main(String[] args) {
+    System.out.println(new App().getGreeting());
+
+    int[] arr = {8, 4, 23, 42, 16, 15};
+    System.out.println(Arrays.toString(insertionSort(arr)));
+
+    //Reverse-sorted
+    int[] arr1 = {20,18,12,8,5,-2};
+    System.out.println(Arrays.toString(insertionSort(arr1)));
+
+    //few uniques
+    int[] arr2 = {5,12,7,5,5,7};
+    System.out.println(Arrays.toString(insertionSort(arr2)));
+
+    //Nearly-sorted
+    int[] arr3 = {2,3,5,7,13,11};
+    System.out.println(Arrays.toString(insertionSort(arr3)));
+  }
 }

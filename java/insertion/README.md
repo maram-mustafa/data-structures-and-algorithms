@@ -1,4 +1,5 @@
 # Challenge Summary 26
+# Challenge Summary
 <!-- Description of the challenge -->
 - Insertion sort is a simple sorting algorithm that builds the final sorted array (or list) one item at a time
 
@@ -34,5 +35,7 @@
 
 ## Solution
 <!-- Show how to run your code, and examples of it in action -->
+* check BLOG.md
+
 * check BLOG.md
 
