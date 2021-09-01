@@ -1,12 +1,14 @@
 package trees;
 
-public class Queue{
-  public Node front;
-  public Node rear;
+public class Queue<T>{
 
+  public QueueNode<T> front;
+  public QueueNode<T> rear;
 
-  public void enqueue(Node value) {
-    Node newValue = new Node();
+  ///////////////////////////////////////////////// challenge 10 ////////////////////////
+
+  public void enqueue(T value) {
+    QueueNode<T> newValue = new QueueNode<>(value);
     if (front == null) {
       front = newValue;
       rear = newValue;
@@ -16,24 +18,27 @@ public class Queue{
     }
   }
 
-  public Node dequeue() throws Exception {
-    Node dequeuedValue;
+  public T dequeue() throws Exception {
+    T dequeuedValue = null;
     if (front == null) {
       throw new Exception("queue is empty");
     } else {
-     dequeuedValue = front.value;
+     dequeuedValue = (T) front.value;
       front = front.next;
     }
     return dequeuedValue;
   }
 
-  public Node peek() throws Exception {
+
+
+  public T peek() throws Exception {
     if (front == null) {
       throw new Exception("queue is empty");
     } else {
       return front.value;
     }
   }
+
   public boolean isEmpty(){
     return front == null;
   }

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BinaryTree<T> {
-  public Node<T> root ;
+  public Node<T> root;
   private List<T> trees = new ArrayList<>();
 
 /////////////////////////////////////////////////code challenge 15 ////////////////////////////////////
@@ -86,9 +86,10 @@ public class BinaryTree<T> {
     if (root != null) {
       breadth.enqueue(root);
     }
+
     while (!breadth.isEmpty()) {
       Node front = breadth.dequeue();
-      trees.add(front.value);
+      trees.add((T) front.value);
 
       if (front.left != null) {
         breadth.enqueue(front.left);
@@ -97,9 +98,10 @@ public class BinaryTree<T> {
         }
       }
     }
-    return trees;
+    return (List<Integer>) trees;
   }
 
 
 
 }
+
