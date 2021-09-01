@@ -28,12 +28,14 @@ public class AppTest {
     assertEquals("[4, 8, 15, 16, 23, 42]", Arrays.toString(App.insertionSort(arr)));
   }
 
+
   //Reverse-sorted test
   @Test
   public void insertionTest2() {
     int[] arr = {20, 18, 12, 8, 5, -2};
     assertEquals("[-2, 5, 8, 12, 18, 20]", Arrays.toString(App.insertionSort(arr)));
   }
+
 
   //few uniques test
   @Test
@@ -42,11 +44,19 @@ public class AppTest {
     assertEquals("[5, 5, 5, 7, 7, 12]", Arrays.toString(App.insertionSort(arr)));
   }
 
+
   //Nearly-sorted test
   @Test
   public void insertionTest4() {
     int[] arr = {2, 3, 5, 7, 13, 11};
     assertEquals("[2, 3, 5, 7, 11, 13]", Arrays.toString(App.insertionSort(arr)));
+  }
+//////////////////////////////////////////////////////// code challenge 27 ////////////////////////////////////////////
+
+  @Test
+  public void mergeSortTest() {
+    int[] arr = {8, 4, 23, 42, 16, 15};
+    assertEquals("[4, 8, 15, 16, 23, 42]", Arrays.toString(App.mergeSort(arr)));
   }
 
 
