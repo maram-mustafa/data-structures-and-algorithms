@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BinaryTree<T> {
+  public Node<T> root ;
   public Node<T> root;
+
   private List<T> trees = new ArrayList<>();
 
 /////////////////////////////////////////////////code challenge 15 ////////////////////////////////////
@@ -82,6 +84,8 @@ public class BinaryTree<T> {
   public List<Integer> breadthFirst(BinarySearchTree<T> tree) throws Exception {
     Queue<Node> breadth = new Queue<>();
 
+
+
     if (root != null) {
       breadth.enqueue(root);
     }
@@ -99,5 +103,8 @@ public class BinaryTree<T> {
     }
     return (List<Integer>) trees;
   }
+
+
+
 }
 
