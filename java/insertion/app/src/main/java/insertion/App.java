@@ -28,27 +28,26 @@ public class App {
 
   //////////////////////////////////////// code challenge 27 //////////////////////////////////////////////////////////
 
-  public static int[] merge(int[] l, int[] r, int[] arr) {
+  public static void merge(int[] left, int[] right, int[] arr) {
     int i = 0;
     int j = 0;
     int k = 0;
 
-    while (i < l.length && j < r.length) {
-      if (l[i] <= r[j]) {
-        arr[k] = l[i];
+    while (i < left.length && j < right.length) {
+      if (left[i] <= right[j]) {
+        arr[k++] = left[i];
         i++;
       } else {
-        arr[k] = r[j];
+        arr[k++] = right[j];
         j++;
       }
-      k++;
     }
-    if (i == l.length) {
-      arr[k] = l[i++];
-    } else {
-    arr[k]= r[j++];
+    while (i < left.length){
+      arr[k++] = left[i++];
     }
-    return arr;
+    while (j< right.length){
+      arr[k++] = right[j++];
+    }
   }
 
   public static int[] mergeSort(int[] arr) {
@@ -58,11 +57,16 @@ public class App {
       int[] l = new int[mid];
       int[] r = new int[n - mid];
 
+      for (int i=0 ; i<mid;i++){
+        l[i] = arr[i];
+      }
+      for(int i = mid ; i<n;i++){
+        r[i - mid] = arr[i];
+      }
       mergeSort(l);
       mergeSort(r);
       merge(l, r, arr);
     }
-
     return arr;
   }
 
@@ -85,7 +89,7 @@ public class App {
 //    int[] arr3 = {2, 3, 5, 7, 13, 11};
 //    System.out.println(Arrays.toString(insertionSort(arr3)));
 //
-
+/////////////////////////////////////////////////////////// code challenge 27
     int[] arr = {8, 4, 23, 42, 16, 15};
     System.out.println(Arrays.toString(mergeSort(arr)));
 
