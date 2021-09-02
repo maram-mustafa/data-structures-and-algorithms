@@ -59,5 +59,11 @@ public class AppTest {
     assertEquals("[4, 8, 15, 16, 23, 42]", Arrays.toString(App.mergeSort(arr)));
   }
 
+////////////////////////////////////////////////////// code challenge 28/////////////////////////////////////////////
+@Test
+public void quickSortTest() {
+  int[] arr = {8, 4, 23, 42, 16, 15};
+  assertEquals("[4, 8, 15, 16, 23, 42]", Arrays.toString(App.quickSort(arr,0,5)));
+}
 
 }
