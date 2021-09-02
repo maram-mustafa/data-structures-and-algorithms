@@ -70,7 +70,7 @@ public class App {
     return arr;
   }
 ///////////////////////////////////////////////////////////////code challenge 28 /////////////////////////////////////
-private static int partition(int[] arr, int low, int high) {
+  private static int partition(int[] arr, int low, int high) {
   int pivot = arr[high];
   int i = (low - 1);
 
@@ -79,20 +79,10 @@ private static int partition(int[] arr, int low, int high) {
       i++;
 
       swap(arr , i , j);
-
-//      int swap = arr[i];
-//      arr[i] = arr[j];
-//      arr[j] = swap;
     }
   }
   swap(arr,i+1,high);
   return (i+1);
-
-//  int swap = arr[i + 1];
-//  arr[i + 1] = arr[high];
-//  arr[high] = swap;
-//
-//  return i + 1;
 }
 
   public static int[] quickSort(int[] arr, int low, int high) {
