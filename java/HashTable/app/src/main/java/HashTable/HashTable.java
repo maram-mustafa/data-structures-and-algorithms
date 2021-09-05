@@ -11,7 +11,7 @@ public class HashTable<T> {
     arrayHash = new Node[size];
 
     for (int i = 0; i < size; i++) {
-      arrayHash[i] = new Node<T>();
+      arrayHash[i] = new Node();
     }
   }
 
@@ -21,9 +21,9 @@ public class HashTable<T> {
 
   public void add(int key, T value) {
     int index = generateHash(key);
-
     Node arrayValue = arrayHash[index];
-    Node newItem = new Node(key, arrayValue);
+    Node newItem = new Node(key, value);
+
     newItem.next = arrayValue.next;
     arrayValue.next = newItem;
   }
