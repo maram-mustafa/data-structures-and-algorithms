@@ -1,31 +1,30 @@
 package trees;
 
-public class BinarySearchTree extends BinaryTree{
-  Node root;
+public class BinarySearchTree<T> extends BinaryTree<T>{
 
-  public void add(int value , Node  root){
-    if(this.root == null){
-      this.root= new Node (value);
-      return ;
+  public BinarySearchTree(){}
+
+////////////////////////////////////// code challenge 15 ///////////////////////////
+  public Node add(Node  root, T value ) {
+    if (this.root == null) {
+      root = new Node(value);
+      return root;
     }
-    if(value < root.value){
-      if(root.left == null){
-        root.left = new Node (value);
-        return;
-      }
-      add(value , root.left);
+
+    if ((Integer) value < (Integer) root.value) {
+   root.left = add(root.left, value);
+      }else if((Integer) value > (Integer) root.value)    {
+      root.right = add(root.right, value);
     }
-    if(value > root.value){
-      if(root.right == null){
-        root.right = new Node(value);
-        return;
-      }
-      add(value , root.right);
-    }
+    return root;
+  }
+
+  public void add (T value){
+    root= add(root , value);
   }
 
 
-  public  boolean contains(int value , Node root){
+  public  boolean contains(Node root , T value){
     if(root == null){
       return false;
     }
@@ -33,14 +32,19 @@ public class BinarySearchTree extends BinaryTree{
       return true;
     }
     boolean check = false;
-    if(value < root.value){
-      check = contains(value, root.left );
+    if((Integer)value < (Integer) root.value){
+      check = contains(root.left, value);
     }
-    if(value > root.value){
-      check = contains(value , root.right);
+    if((Integer) value > (Integer) root.value){
+      check = contains(root.right, value);
     }
     return check;
   }
+
+  public boolean contains(T value){
+    return contains(root , value);
+  }
+
 
   @Override
   public String toString() {
