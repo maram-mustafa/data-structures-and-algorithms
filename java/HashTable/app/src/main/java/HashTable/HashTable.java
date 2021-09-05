@@ -8,9 +8,9 @@ public class HashTable<T> {
 
   public HashTable(int size) {
     this.size = size;
-    arrayHash = new Node[this.size];
+    arrayHash = new Node[size];
 
-    for (int i = 0; i < arrayHash.length; i++) {
+    for (int i = 0; i < size; i++) {
       arrayHash[i] = new Node<T>();
     }
   }
@@ -19,37 +19,40 @@ public class HashTable<T> {
     return key % size;
   }
 
-  public void add (int key , T value){
+  public void add(int key, T value) {
     int index = generateHash(key);
+
     Node arrayValue = arrayHash[index];
-    Node newItem = new Node(key,arrayValue);
-    newItem.next=arrayValue.next;
-    arrayValue.next=newItem;
+    Node newItem = new Node(key, arrayValue);
+    newItem.next = arrayValue.next;
+    arrayValue.next = newItem;
   }
 
-  public T Get(int key){
+  public T get(int key) {
     T value = null;
-    int index= generateHash(key);
+    int index = generateHash(key);
     Node arrayValue = arrayHash[index];
-    while(arrayValue.next != null){
-      if(arrayValue.getKey()==key){
-         value = (T) arrayValue.getValue();
+    while (arrayValue != null) {
+      if (arrayValue.key == key) {
+        value = (T) arrayValue.value;
         break;
       }
-      arrayValue=arrayValue.next;
+      arrayValue = arrayValue.next;
     }
     return value;
   }
 
-//  public boolean contains(int key){
-//    int index = generateHash(key);
-//    if(arrayHash[index] = ){
-//
-//    }
-//  }
-
-
-
-
-
+  public boolean contains(int key) {
+    boolean value = false;
+    int index = generateHash(key);
+    Node arrayValue = arrayHash[index];
+    while (arrayHash != null) {
+      if (arrayValue.key == key) {
+        value = true;
+        break;
+      }
+      arrayValue = arrayValue.next;
+    }
+    return value;
+  }
 }

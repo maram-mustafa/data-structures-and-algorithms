@@ -5,6 +5,7 @@ public class Node<T> {
   public T value;
   public Node next;
 
+
   public Node(int key, T value) {
     this.key = key;
     this.value = value;

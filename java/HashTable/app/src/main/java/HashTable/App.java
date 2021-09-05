@@ -12,10 +12,11 @@ public class App {
       System.out.println(new App().getGreeting());
 
       HashTable<String> hash = new HashTable<String>(10);
-      hash.put(10, "maram");
-      hash.put(5, "rand");
-      hash.put(15, "zaina");
-      System.out.println(hash.Get(5));
+      hash.add(10, "maram");
+      hash.add(5, "rand");
+      hash.add(15, "zaina");
+      System.out.println(hash.get(5));
+      System.out.println(hash.contains(10));
 
     }
 }
