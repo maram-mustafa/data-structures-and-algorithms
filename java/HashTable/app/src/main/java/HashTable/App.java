@@ -3,20 +3,72 @@
  */
 package HashTable;
 
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Locale;
+import java.util.Map;
+
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
+  public String getGreeting() {
+    return "Hello World!";
+  }
+
+  static String repeatedWord(String word) {
+    String words[] = word.split(" ");
+    HashMap<String, Integer> hashedWord = new HashMap<String, Integer>();
+
+    for (int i=0; i<words.length; i++) {
+      if (hashedWord.containsKey(words[i]))
+        hashedWord.put(words[i], hashedWord.get(words[i]) + 1); // word exists
+      else
+        hashedWord.put(words[i], 1);
+    }
+    for (int i=0; i<words.length; i++) {
+      int count = hashedWord.get(words[i]);
+      if (count > 1) {
+        return words[i];
+      }
     }
 
-    public static void main(String[] args) {
-      System.out.println(new App().getGreeting());
+    return "NoRepetition";
+  }
+//  static String repeatedWord(String word) {
+//    String value = null;
+//    value=value.toLowerCase();
+//
+//    String[] words = word.split(" ");
+//    HashTable<String> wordHash = new HashTable<String>(words.length);
+//
+//    for (int i = 0; i < words.length; i++) {
+//      if (wordHash.contains(words.length)) {
+//        value = words[i];
+//        break;
+//      }
+//    }
+//    return value;
+//  }
 
-      HashTable<String> hash = new HashTable<String>(10);
-      hash.add(10, "maram");
-      hash.add(5, "rand");
-      hash.add(15, "zaina");
-      System.out.println(hash.get(5));
-      System.out.println(hash.contains(10));
 
-    }
+
+
+  public static void main(String[] args) {
+    System.out.println(new App().getGreeting());
+
+//    String string = "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way – in short, the period was so far like the present period, that some of its noisiest authorities insisted on its being received, for good or for evil, in the superlative degree of comparison only...";
+    String string = "Once upon a time, there was a brave princess who...";
+
+    String firstWord = repeatedWord(string);
+      System.out.println("First repeated word :: " + firstWord);
+
+
+
+//
+//      HashTable<String> hash = new HashTable<String>(10);
+//      hash.add(10, "maram");
+//      hash.add(5, "rand");
+//      hash.add(15, "zaina");
+//      System.out.println(hash.get(5));
+//      System.out.println(hash.contains(10));
+
+  }
 }
