@@ -25,4 +25,12 @@ public class AppTest {
       assertTrue(hash.contains(10));
 
     }
+
+
+  @Test
+  void testHashTable2() {
+    String str1 = "Once upon a time, there was a brave princess who...";
+    assertEquals("a", App.repeatedWord(str1));
+
+  }
 }
