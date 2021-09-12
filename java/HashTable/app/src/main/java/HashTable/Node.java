@@ -1,34 +1,32 @@
 package HashTable;
 
-public class Node<T> {
-  public int key;
-  public T value;
+public class Node {
+  public Object key;
+  public Object value;
   public Node next;
 
 
-  public Node(int key, T value) {
+  public Node(Object key, Object value) {
     this.key = key;
     this.value = value;
-    next=null;
   }
 
   public Node() {
-    next = null;
   }
 
-  public int getKey() {
+  public Object getKey() {
     return key;
   }
 
-  public void setKey(int key) {
+  public void setKey(Object key) {
     this.key = key;
   }
 
-  public T getValue() {
+  public Object getValue() {
     return value;
   }
 
-  public void setValue(T value) {
+  public void setValue(Object value) {
     this.value = value;
   }
 }
