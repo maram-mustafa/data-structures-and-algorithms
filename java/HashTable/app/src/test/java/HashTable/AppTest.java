@@ -3,7 +3,12 @@
  */
 package HashTable;
 
+import jdk.internal.dynalink.linker.LinkerServices;
 import org.junit.Test;
+
+import java.util.Arrays;
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 public class AppTest {
@@ -26,11 +31,62 @@ public class AppTest {
 
     }
 
-
   @Test
   void testHashTable2() {
     String str1 = "Once upon a time, there was a brave princess who...";
     assertEquals("a", App.repeatedWord(str1));
+
+  }
+
+  @Test
+  void testTree (){
+    BinaryTree<Integer> tree1 = new BinaryTree<Integer>();
+    tree1.root = new TreeNode<Integer>(150);
+    tree1.root.left = new TreeNode<Integer>(100);
+    tree1.root.right = new TreeNode<Integer>(250);
+    tree1.root.left.left = new TreeNode<Integer>(75);
+    tree1.root.left.right = new TreeNode<Integer>(160);
+    tree1.root.left.right.left = new TreeNode<Integer>(125);
+    tree1.root.left.right.right = new TreeNode<Integer>(175);
+    tree1.root.right.left = new TreeNode<Integer>(200);
+    tree1.root.right.right = new TreeNode<Integer>(350);
+    tree1.root.right.right.left = new TreeNode<Integer>(300);
+    tree1.root.right.right.right = new TreeNode<Integer>(500);
+
+    BinaryTree<Integer> tree2 = new BinaryTree<Integer>();
+    tree2.root = new TreeNode<Integer>(42);
+    tree2.root.left = new TreeNode<Integer>(100);
+    tree2.root.right = new TreeNode<Integer>(600);
+    tree2.root.left.left = new TreeNode<Integer>(15);
+    tree2.root.left.right = new TreeNode<Integer>(160);
+    tree2.root.left.right.left = new TreeNode<Integer>(125);
+    tree2.root.left.right.right = new TreeNode<Integer>(175);
+    tree2.root.right.left = new TreeNode<Integer>(200);
+    tree2.root.right.right = new TreeNode<Integer>(350);
+    tree2.root.right.right.left = new TreeNode<Integer>(4);
+    tree2.root.right.right.right = new TreeNode<Integer>(500);
+
+    List<Integer> list = Arrays.asList(100 ,125,160,175,200,350,500);
+
+    assertEquals(list,App.treeIntersection(tree1,tree2));
+
+  }
+
+  @Test
+  void testLeftJoin(){
+    HashTable<String> table1 = new HashTable<String>(5);
+    HashTable<String> table2 = new HashTable<String>(5);
+
+    table1.add("found", "enamored");
+    table1.add("wrath", "anger");
+    table1.add("diligent", "employed");
+
+    table2.add("found", "averse");
+    table2.add("wrath", "delight");
+    table2.add("diligent", "idle");
+
+    List<String> list = Arrays.asList("[found,averse,enamored]", "[diligent,idle,employed]");
+    assertEquals(list,App.leftJoin(table1,table2));
 
   }
 }

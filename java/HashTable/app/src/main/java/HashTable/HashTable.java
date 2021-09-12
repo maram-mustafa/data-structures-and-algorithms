@@ -1,6 +1,7 @@
 package HashTable;
 
 import java.util.LinkedList;
+import java.util.Map;
 
 public class HashTable<T> {
   Node[] arrayHash;
@@ -15,20 +16,27 @@ public class HashTable<T> {
     }
   }
 
-  public int generateHash(int key) {
-    return key % size;
+  public int generateHash(Object key) {
+    if(key.getClass().getSimpleName().equals("String")){
+      return Math.abs(key.hashCode()%size);
+    }else{
+      return(Integer) key % size;
+    }
   }
 
-  public void add(int key, T value) {
+  public void add(Object key, Object value) {
     int index = generateHash(key);
-    Node arrayValue = arrayHash[index];
     Node newItem = new Node(key, value);
 
-    newItem.next = arrayValue.next;
-    arrayValue.next = newItem;
+    if(arrayHash[index].key == null){
+      arrayHash[index] = newItem;
+    }else{
+      newItem.next=arrayHash[index].next;
+      arrayHash[index].next=newItem;
+    }
   }
 
-  public T get(int key) {
+  public T get(Object key) {
     T value = null;
     int index = generateHash(key);
     Node arrayValue = arrayHash[index];
@@ -42,13 +50,16 @@ public class HashTable<T> {
     return value;
   }
 
-  public boolean contains(int key) {
+  public boolean contains(Object key) {
     boolean value = false;
     int index = generateHash(key);
     Node arrayValue = arrayHash[index];
     while (arrayHash != null) {
       if (arrayValue.key == key) {
         value = true;
+        break;
+      }
+      if(arrayValue.next==null){
         break;
       }
       arrayValue = arrayValue.next;
