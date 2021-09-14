@@ -5,34 +5,27 @@ public class Queue<T> {
   public Node front;
   public Node rear;
 
-
+  //////////////////////////////////// challenge 10 ///////////////////////////////////
   public void enqueue(T value) {
-    try{
-      Node newValue = new Node((String) value);
-      if (front == null) {
-        front = newValue;
-        rear = newValue;
-      } else {
-        rear.next = newValue;
-        rear = newValue;
-      }
-
-    }catch (NullPointerException e){
-      e.printStackTrace();
-      System.out.println("empty!!!");
+    Node newNode = new Node(value);
+    if (front == null) {
+      front = newNode;
+      rear = newNode;
+    } else {
+      rear.next = newNode;
+      rear = newNode;
     }
-
   }
 
   public T dequeue() throws Exception {
-    T dequeuedValue = null;
+    T dequeued = null;
     if (front == null) {
       throw new Exception("queue is empty");
     } else {
-      dequeuedValue = (T) front.value;
+      dequeued = (T) front.value;
       front = front.next;
     }
-    return dequeuedValue;
+    return dequeued;
   }
 
   public T peek() throws Exception {
@@ -47,4 +40,3 @@ public class Queue<T> {
     return front == null;
   }
 }
-

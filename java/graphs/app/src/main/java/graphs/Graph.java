@@ -14,7 +14,7 @@ public class Graph<T> {
   }
 
   void addEdge(T firstNode, T secondNode) {
-    Node value1= new Node(firstNode);
+    Node value1 = new Node(firstNode);
     Node value2 = new Node(secondNode);
     map.get(value1).add(value2);
     map.get(value2).add(value1);
@@ -26,8 +26,9 @@ public class Graph<T> {
     listOfNodes.addAll(map.keySet());
     return listOfNodes;
   }
+
   public ArrayList<Node<T>> getNeighbore(T value) {
-  return (ArrayList<Node<T>>) map.get(new Node<T>(value));
+    return (ArrayList<Node<T>>) map.get(new Node<T>(value));
   }
 
   public int size() {
@@ -36,28 +37,30 @@ public class Graph<T> {
 
 
 /////////////////////////////////////////////// code challenge 36 /////////////////////////////////
-  public ArrayList<Node<T>> breadthFirst(T value) throws Exception {
-    Node<T> newNode = new Node(value);
-    if (newNode.value == null) return null;
-    List<Node<T>> addedNode = new ArrayList<>();
-    Queue<T> queueNode = new Queue<T>();
+
+  public List<Node<T>> breadthFirst(T value) throws Exception {
+    Node<T> node = new Node(value);
+    if (node.value == null) return null;
+    List<Node<T>> nodeList = new ArrayList<>();
+    Queue<T> breadthQueue = new Queue<T>();
     Set<Node<T>> visitedBefore = new HashSet<>();
 
-    queueNode.enqueue((T) newNode);
-    visitedBefore.add(newNode);
+    breadthQueue.enqueue((T) node);
+    visitedBefore.add(node);
 
-    while (!queueNode.isEmpty()) {
-      Node<T> front = (Node<T>) queueNode.dequeue();
-      addedNode.add(front);
-      for (Node<T> neighbor : getNeighbore(front.value)) {
-        if (!visitedBefore.contains(neighbor)) {
-          visitedBefore.add(neighbor);
-          queueNode.enqueue((T) neighbor);
+    while (!breadthQueue.isEmpty()) {
+      Node<T> firstValue = (Node<T>) breadthQueue.dequeue();
+      nodeList.add(firstValue);
+      for (Node<T> neighborNode : getNeighbore(firstValue.value)) {
+        if (!visitedBefore.contains(neighborNode)) {
+          visitedBefore.add(neighborNode);
+          breadthQueue.enqueue((T) neighborNode);
         }
       }
     }
-    return (ArrayList<Node<T>>) addedNode;
+    return nodeList;
   }
+
 
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////
   public Map<Node<T>, List<Node<T>>> getMap() {

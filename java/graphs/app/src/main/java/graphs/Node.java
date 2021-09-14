@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Node<T>{
 
-//  String label;
+  //  String label;
   T value ;
   public Node next;
 
