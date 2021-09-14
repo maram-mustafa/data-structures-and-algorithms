@@ -14,7 +14,7 @@ public class Graph<T> {
   }
 
   void addEdge(T firstNode, T secondNode) {
-    Node value1= new Node(firstNode);
+    Node value1 = new Node(firstNode);
     Node value2 = new Node(secondNode);
     map.get(value1).add(value2);
     map.get(value2).add(value1);
@@ -27,22 +27,42 @@ public class Graph<T> {
     return listOfNodes;
   }
 
-
   public ArrayList<Node<T>> getNeighbore(T value) {
-  return (ArrayList<Node<T>>) map.get(new Node<T>(value));
-
-
+    return (ArrayList<Node<T>>) map.get(new Node<T>(value));
   }
-
 
   public int size() {
     return map.size();
   }
 
 
+/////////////////////////////////////////////// code challenge 36 /////////////////////////////////
+
+  public List<Node<T>> breadthFirst(T value) throws Exception {
+    Node<T> node = new Node(value);
+    if (node.value == null) return null;
+    List<Node<T>> nodeList = new ArrayList<>();
+    Queue<T> breadthQueue = new Queue<T>();
+    Set<Node<T>> visitedBefore = new HashSet<>();
+
+    breadthQueue.enqueue((T) node);
+    visitedBefore.add(node);
+
+    while (!breadthQueue.isEmpty()) {
+      Node<T> firstValue = (Node<T>) breadthQueue.dequeue();
+      nodeList.add(firstValue);
+      for (Node<T> neighborNode : getNeighbore(firstValue.value)) {
+        if (!visitedBefore.contains(neighborNode)) {
+          visitedBefore.add(neighborNode);
+          breadthQueue.enqueue((T) neighborNode);
+        }
+      }
+    }
+    return nodeList;
+  }
 
 
-
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////
   public Map<Node<T>, List<Node<T>>> getMap() {
     return map;
   }
@@ -57,59 +77,4 @@ public class Graph<T> {
       "map=" + map +
       '}';
   }
-
-
 }
-
-
-
-//  private Map<Node, List<T> > map = new HashMap<>();
-//
-//  public void addVertex(T value)
-//  {
-//    map.put((Node) value, new LinkedList<T>());
-//  }
-//
-//  public void addEdge(T source, T destination, boolean bidirectional)
-//  {
-//
-//    if (!map.containsKey(source))
-//      addVertex(source);
-//
-//    if (!map.containsKey(destination))
-//      addVertex(destination);
-//
-//    map.get(source).add(destination);
-//    if (bidirectional == true) {
-//      map.get(destination).add(source);
-//    }
-//  }
-//
-//  public ArrayList<Node> getNodes(){
-//    if(map.isEmpty()){
-//      return null;
-//    }else{
-//      ArrayList<Node> listOfAllNodes= new ArrayList<>();
-//      listOfAllNodes.addAll(map.keySet());
-//      return listOfAllNodes;
-//    }
-//  }
-//
-//  public ArrayList<Node<T>> getNeighbors (Node value){
-//    return (ArrayList<Node<T>>) map.get(value);
-//  }
-//
-//
-//
-//  public void getVertexCount()
-//  {
-//    System.out.println("The graph has "
-//      + map.keySet().size()
-//      + " vertex");
-//  }
-//
-//
-//
-//  public int size(){
-//    return map.size();
-//  }

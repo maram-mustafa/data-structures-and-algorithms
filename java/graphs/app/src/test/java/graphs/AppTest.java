@@ -35,6 +35,31 @@ public class AppTest {
     assertEquals("[Node{value=1, next=null}]" , newGraph.getNeighbore(3).toString());
   }
 
+  @Test public void testBredthFirst() throws Exception {
+    Graph newGraph = new Graph();
 
+    newGraph.addNode(1);
+    newGraph.addNode(2);
+    newGraph.addNode(3);
+    newGraph.addNode(4);
+    newGraph.addNode(5);
+    newGraph.addNode(6);
+    newGraph.addNode(7);
+    newGraph.addNode(8);
 
+    newGraph.addEdge(1, 2);
+    newGraph.addEdge(1, 3);
+    newGraph.addEdge(2, 4);
+    newGraph.addEdge(4, 5);
+    newGraph.addEdge(4, 6);
+    newGraph.addEdge(6, 7);
+    newGraph.addEdge(6, 8);
+
+    String results = "[Node{value=1, next=null}, Node{value=2, next=null}, Node{value=3, next=null}, Node{value=4, next=null}, Node{value=5, next=null}, Node{value=6, next=null}, Node{value=7, next=null}, Node{value=8, next=null}]";
+    assertEquals(results , newGraph.breadthFirst(1).toString());
   }
+
+
+
+
+}
