@@ -11,7 +11,7 @@ public class App {
         return "Hello World!";
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         System.out.println(new App().getGreeting());
 
 
@@ -33,8 +33,9 @@ public class App {
 //      System.out.println(newGraph.getNodes());
 //      System.out.println(newGraph.getNeighbore(1));
 //      System.out.println(newGraph.getNeighbore(2));
-      System.out.println(newGraph.getNeighbore(3));
+//      System.out.println(newGraph.getNeighbore(3));
 
+      System.out.println(newGraph.breadthFirst(2));
 
 
 

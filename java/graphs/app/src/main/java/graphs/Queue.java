@@ -7,14 +7,21 @@ public class Queue<T> {
 
 
   public void enqueue(T value) {
-    Node newValue = new Node((String) value);
-    if (front == null) {
-      front = newValue;
-      rear = newValue;
-    } else {
-      rear.next = newValue;
-      rear = newValue;
+    try{
+      Node newValue = new Node((String) value);
+      if (front == null) {
+        front = newValue;
+        rear = newValue;
+      } else {
+        rear.next = newValue;
+        rear = newValue;
+      }
+
+    }catch (NullPointerException e){
+      e.printStackTrace();
+      System.out.println("empty!!!");
     }
+
   }
 
   public T dequeue() throws Exception {
