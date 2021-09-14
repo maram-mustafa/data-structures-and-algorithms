@@ -11,4 +11,30 @@ public class AppTest {
         App classUnderTest = new App();
         assertNotNull("app should have a greeting", classUnderTest.getGreeting());
     }
-}
+
+  @Test public void testGraph() {
+    Graph newGraph = new Graph();
+    newGraph.addNode(1);
+    newGraph.addNode(2);
+    assertEquals("[Node{value=1, next=null}, Node{value=2, next=null}]" , newGraph.getNodes().toString());
+    }
+
+  @Test public void testGraph2() {
+    Graph newGraph = new Graph();
+
+    newGraph.addNode(1);
+    newGraph.addNode(2);
+    newGraph.addNode(3);
+    newGraph.addNode(4);
+    newGraph.addNode(5);
+    newGraph.addNode(6);
+    newGraph.addEdge(1,2);
+    newGraph.addEdge(1,3);
+    newGraph.addEdge(2,4);
+    newGraph.addEdge(4,5);
+    assertEquals("[Node{value=1, next=null}]" , newGraph.getNeighbore(3).toString());
+  }
+
+
+
+  }

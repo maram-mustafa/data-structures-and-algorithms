@@ -2,50 +2,114 @@ package graphs;
 
 import java.util.*;
 
-public class Graph {
+public class Graph<T> {
 
-  private Map<Node, List<Node>> adjVertices;
+  private Map<Node<T>, List<Node<T>>> map = new HashMap<>();
 
 
-  void addVertex(String label) {
-    adjVertices.putIfAbsent(new Node(label), new ArrayList<>());
+  public Node<T> addNode(T value) {
+    Node node = new Node(value);
+    map.put(node, new ArrayList<>());
+    return node;
   }
 
-  void addEdge(String label1, String label2) {
-    Node v1 = new Node(label1);
-    Node v2 = new Node(label2);
-    adjVertices.get(v1).add(v2);
-    adjVertices.get(v2).add(v1);
+  void addEdge(T firstNode, T secondNode) {
+    Node value1= new Node(firstNode);
+    Node value2 = new Node(secondNode);
+    map.get(value1).add(value2);
+    map.get(value2).add(value1);
   }
 
-  public Set<Node> getNodes(){
-    return adjVertices.keySet();
-  }
-//
-//  public  List<Node> getNeighbore(String label){
-//    List<String> values= new ArrayList<>();
-//
-//    return values;
-//  }
+  public ArrayList<Node> getNodes() {
 
-
-  public int size(){
-    return adjVertices.size();
+    ArrayList<Node> listOfNodes = new ArrayList<>();
+    listOfNodes.addAll(map.keySet());
+    return listOfNodes;
   }
 
-  /////////////////////////////////////////////////////////////////
-  public Map<Node, List<Node>> getAdjVertices() {
-    return adjVertices;
+
+  public ArrayList<Node<T>> getNeighbore(T value) {
+  return (ArrayList<Node<T>>) map.get(new Node<T>(value));
+
+
   }
 
-  public void setAdjVertices(Map<Node, List<Node>> adjVertices) {
-    this.adjVertices = adjVertices;
+
+  public int size() {
+    return map.size();
+  }
+
+
+
+
+
+  public Map<Node<T>, List<Node<T>>> getMap() {
+    return map;
+  }
+
+  public void setMap(Map<Node<T>, List<Node<T>>> map) {
+    this.map = map;
   }
 
   @Override
   public String toString() {
     return "Graph{" +
-      "adjVertices=" + adjVertices +
+      "map=" + map +
       '}';
   }
+
+
 }
+
+
+
+//  private Map<Node, List<T> > map = new HashMap<>();
+//
+//  public void addVertex(T value)
+//  {
+//    map.put((Node) value, new LinkedList<T>());
+//  }
+//
+//  public void addEdge(T source, T destination, boolean bidirectional)
+//  {
+//
+//    if (!map.containsKey(source))
+//      addVertex(source);
+//
+//    if (!map.containsKey(destination))
+//      addVertex(destination);
+//
+//    map.get(source).add(destination);
+//    if (bidirectional == true) {
+//      map.get(destination).add(source);
+//    }
+//  }
+//
+//  public ArrayList<Node> getNodes(){
+//    if(map.isEmpty()){
+//      return null;
+//    }else{
+//      ArrayList<Node> listOfAllNodes= new ArrayList<>();
+//      listOfAllNodes.addAll(map.keySet());
+//      return listOfAllNodes;
+//    }
+//  }
+//
+//  public ArrayList<Node<T>> getNeighbors (Node value){
+//    return (ArrayList<Node<T>>) map.get(value);
+//  }
+//
+//
+//
+//  public void getVertexCount()
+//  {
+//    System.out.println("The graph has "
+//      + map.keySet().size()
+//      + " vertex");
+//  }
+//
+//
+//
+//  public int size(){
+//    return map.size();
+//  }
