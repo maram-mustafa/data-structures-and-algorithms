@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Graph<T> {
 
-  private Map<Node<T>, List<Node<T>>> map = new HashMap<>();
+  public Map<Node<T>, List<Node<T>>> map = new HashMap<>();
 
 
   public Node<T> addNode(T value) {
@@ -61,7 +61,24 @@ public class Graph<T> {
     return nodeList;
   }
 
+  /////////////////////////////////////////////////code challenge 38///////////////////////////////////////////////////////////
 
+  Set<Node<T>> depthFirstTraversal(T value) throws Exception {
+    Node<T> node = new Node(value);
+    Set<Node<T>> visitedBefore = new HashSet<>();
+    Stack<T> stack = new Stack<T>();
+    stack.push((T) node);
+    while (!stack.isEmpty()) {
+      T vertex = stack.pop();
+      if (!visitedBefore.contains(vertex)) {
+        visitedBefore.add((Node<T>) vertex);
+        for (Node v : getNeighbore((T) ((Node<?>) vertex).value)) {
+          stack.push((T) v);
+        }
+      }
+    }
+    return  visitedBefore;
+  }
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////
   public Map<Node<T>, List<Node<T>>> getMap() {
     return map;

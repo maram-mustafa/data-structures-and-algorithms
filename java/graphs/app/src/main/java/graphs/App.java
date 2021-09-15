@@ -14,7 +14,7 @@ public class App {
   public static void main(String[] args) throws Exception {
     System.out.println(new App().getGreeting());
 
-
+  try{
     Graph newGraph = new Graph();
 
     newGraph.addNode(1);
@@ -36,20 +36,24 @@ public class App {
 
 
 //      System.out.println(newGraph);
-    System.out.println(newGraph.size());
-    System.out.println("/////////////////////////////////");
-    System.out.println(newGraph.getNodes());
-    System.out.println("/////////////////////////////////");
-    System.out.println(newGraph.getNeighbore(1));
-    System.out.println("/////////////////////////////////");
-    System.out.println(newGraph.getNeighbore(2));
-    System.out.println("/////////////////////////////////");
-    System.out.println(newGraph.getNeighbore(3));
-    System.out.println("/////////////////////////////////");
-    System.out.println(newGraph.breadthFirst(1));
-    System.out.println("/////////////////////////////////");
-    System.out.println(newGraph.breadthFirst(2));
+//    System.out.println(newGraph.size());
+//    System.out.println("/////////////////////////////////");
+//    System.out.println(newGraph.getNodes());
+//    System.out.println("/////////////////////////////////");
+//    System.out.println(newGraph.getNeighbore(1));
+//    System.out.println("/////////////////////////////////");
+//    System.out.println(newGraph.getNeighbore(2));
+//    System.out.println("/////////////////////////////////");
+//    System.out.println(newGraph.getNeighbore(3));
+//    System.out.println("/////////////////////////////////");
+//    System.out.println(newGraph.breadthFirst(1));
+//    System.out.println("/////////////////////////////////");
+//    System.out.println(newGraph.breadthFirst(2));
 
+    System.out.println(newGraph.depthFirstTraversal(1));
 
+  }catch (Exception e){
+    e.printStackTrace();
+  }
   }
 }
