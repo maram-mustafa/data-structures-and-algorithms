@@ -44,4 +44,21 @@
 O(n^2) time
 O(n) space
 
+# Graphs (graph-breadth-first)
+<!-- Short summary or background information -->
+- depth first
+- Arguments: Node (Starting point of search)
+- Return: A collection of nodes in their pre-order depth-first traversal order
+- Display the collection
+
+## Challenge
+![whiteboard](./Images/codechallenge38.PNG)
+
+
+## Approach & Efficiency
+O(n^2) time
+O(n) space
+
+
+
 
